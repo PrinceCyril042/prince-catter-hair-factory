@@ -1115,3 +1115,105 @@ background: url("../images/hero-bg.jpg") center/cover no-repeat;
 .contact-form {
   animation: fadeInUp 1s ease-out;
 }
+.contact-hero {
+  background: url('assets/images/hero-bg.jpg') center/cover no-repeat;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 2s ease;
+}
+
+.contact-overlay {
+  background: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-container {
+  max-width: 600px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  color: white;
+  animation: slideUp 1.5s ease;
+}
+
+.contact-container h1 {
+  color: #ffb700;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.contact-container p {
+  margin-bottom: 20px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  transition: background 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.contact-form button {
+  background: #ffb700;
+  color: black;
+  font-weight: bold;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(255, 183, 0, 0.4);
+}
+
+.contact-form button:hover {
+  background: #ffd24d;
+  box-shadow: 0 0 20px rgba(255, 183, 0, 0.8);
+}
+
+.contact-info {
+  margin-top: 30px;
+}
+
+.social-links a {
+  color: #ffb700;
+  margin: 0 10px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #fff;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
