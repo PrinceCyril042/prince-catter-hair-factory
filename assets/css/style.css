@@ -1217,3 +1217,259 @@ background: url("../images/hero-bg.jpg") center/cover no-repeat;
   from { transform: translateY(40px); opacity: 0; }
   to { transform: translateY(0); opacity: 1; }
 }
+/* Stylish Font for Brand Name */
+.brand-name {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 28px;
+  color: gold;
+  text-shadow: 0 0 8px rgba(255, 215, 0, 0.4);
+}
+
+/* Navbar Icons */
+.navbar ul {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  list-style: none;
+}
+
+.navbar li i {
+  margin-right: 8px;
+  color: gold;
+}
+
+/* Social Icons */
+.social-icons a {
+  margin: 0 10px;
+  font-size: 24px;
+  color: gold;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  color: white;
+  transform: scale(1.2);
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  padding: 20px;
+  color: gold;
+}
+
+.logo img {
+  height: 60px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+/* Brand Name Styling */
+.brand-name {
+  font-family: 'Montserrat', sans-serif;
+  color: gold;
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+
+/* Navigation Icons */
+.nav a i {
+  margin-right: 6px;
+  color: gold;
+}
+
+/* Product Grid */
+.shop-section {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.shop-section h2 {
+  font-size: 2rem;
+  color: gold;
+  margin-bottom: 30px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.product-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: scale(1.03);
+}
+
+.product-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.product-card h3 {
+  color: #222;
+  margin-top: 15px;
+  font-weight: 600;
+}
+
+.buy-btn {
+  background: gold;
+  color: #000;
+  padding: 10px 20px;
+  border-radius: 30px;
+  display: inline-block;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+.buy-btn:hover {
+  background: #c9a300;
+  color: #fff;
+}
+
+/* WhatsApp Floating Button */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: gold;
+  color: #fff;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 0 0 15px rgba(255,215,0,0.8);
+  animation: glow 1.5s infinite alternate;
+}
+
+.whatsapp-float i {
+  margin-top: 15px;
+}
+
+@keyframes glow {
+  from { box-shadow: 0 0 10px gold; }
+  to { box-shadow: 0 0 25px gold; }
+}
+
+/* Footer Social Icons */
+.social-icons a {
+  margin: 0 10px;
+  color: gold;
+  font-size: 1.5rem;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #c9a300;
+}
+/* Import a luxury font */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+
+/* Header Styling */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000;
+  padding: 20px;
+  color: gold;
+  border-bottom: 2px solid gold;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 60px;
+  margin-right: 12px;
+  border-radius: 8px;
+}
+
+/* 🔥 Animated Luxury Text */
+.brand-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 30px;
+  font-weight: 700;
+  background: linear-gradient(90deg, #d4af37, #fff8dc, #ffd700, #d4af37);
+  background-size: 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 5s linear infinite;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+}
+
+@keyframes shine {
+  0% { background-position: 0%; }
+  100% { background-position: 300%; }
+}
+
+/* Navbar */
+.navbar {
+  background-color: #111;
+  padding: 15px 0;
+  text-align: center;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li {
+  color: white;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  transition: 0.3s;
+}
+
+.navbar li i {
+  margin-right: 8px;
+  color: gold;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.navbar a:hover {
+  color: gold;
+}
+
+/* Cart */
+.cart {
+  font-size: 18px;
+  color: gold;
+}
+
+/* Hover glow */
+.navbar li:hover i {
+  color: #fff;
+  transform: scale(1.2);
+}
