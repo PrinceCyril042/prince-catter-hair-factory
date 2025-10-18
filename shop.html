@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop - Prince Catter Hair Factory</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #111;
+      padding: 1.5rem;
+      text-align: center;
+      color: #fff;
+      font-size: 1.8rem;
+      letter-spacing: 2px;
+      font-weight: bold;
+    }
+
+    .shop-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      padding: 2rem;
+    }
+
+    .product {
+      background-color: #1a1a1a;
+      border-radius: 12px;
+      overflow: hidden;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .product:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    }
+
+    .product img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+
+    .product h3 {
+      margin: 10px 0 5px;
+      color: #fff;
+    }
+
+    .product p {
+      margin: 0;
+      color: #ccc;
+    }
+
+    .price {
+      color: #ffcc00;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+
+    .buy-btn {
+      display: inline-block;
+      background-color: #ffcc00;
+      color: #000;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-bottom: 15px;
+      transition: background-color 0.3s ease;
+    }
+
+    .buy-btn:hover {
+      background-color: #e6b800;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      color: #999;
+      background-color: #111;
+      font-size: 0.9rem;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>Prince Catter Hair Factory</header>
+
+  <section class="shop-container">
+    <!-- Product 1 -->
+    <div class="product">
+      <img src="assets/images/wig1.jpg" alt="Luxury Body Wave Wig">
+      <h3>Luxury Body Wave Wig</h3>
+      <p>Soft & silky 100% human hair</p>
+      <p class="price">₦85,000</p>
+      <a class="buy-btn" href="https://wa.me/2348051234567?text=Hi!%20I%20want%20to%20buy%20the%20Luxury%20Body%20Wave%20Wig.">Buy on WhatsApp</a>
+    </div>
+
+    <!-- Product 2 -->
+    <div class="product">
+      <img src="assets/images/wig2.jpg" alt="Straight Hair Wig">
+      <h3>Bone Straight Hair Wig</h3>
+      <p>Ultra sleek & natural finish</p>
+      <p class="price">₦120,000</p>
+      <a class="buy-btn" href="https://wa.me/2348051234567?text=Hi!%20I%20want%20to%20buy%20the%20Bone%20Straight%20Hair%20Wig.">Buy on WhatsApp</a>
+    </div>
+
+    <!-- Product 3 -->
+    <div class="product">
+      <img src="assets/images/wig3.jpg" alt="Curly Human Hair">
+      <h3>Deep Curly Hair</h3>
+      <p>Defined curls that bounce beautifully</p>
+      <p class="price">₦95,000</p>
+      <a class="buy-btn" href="https://wa.me/2348051234567?text=Hi!%20I%20want%20to%20buy%20the%20Deep%20Curly%20Hair.">Buy on WhatsApp</a>
+    </div>
+
+    <!-- Product 4 -->
+    <div class="product">
+      <img src="assets/images/wig4.jpg" alt="Frontal Wig">
+      <h3>13x4 Frontal Wig</h3>
+      <p>Natural-looking frontal finish</p>
+      <p class="price">₦110,000</p>
+      <a class="buy-btn" href="https://wa.me/2348051234567?text=Hi!%20I%20want%20to%20buy%20the%2013x4%20Frontal%20Wig.">Buy on WhatsApp</a>
+    </div>
+
+    <!-- Product 5 -->
+    <div class="product">
+      <img src="assets/images/wig5.jpg" alt="Pixie Cut Wig">
+      <h3>Pixie Cut Wig</h3>
+      <p>Bold, short and confident look</p>
+      <p class="price">₦70,000</p>
+      <a class="buy-btn" href="https://wa.me/2348051234567?text=Hi!%20I%20want%20to%20buy%20the%20Pixie%20Cut%20Wig.">Buy on WhatsApp</a>
+    </div>
+
+    <!-- Product 6 -->
+    <div class="product">
+      <img src="assets/images/wig6.jpg" alt="Blonde Highlight Wig">
+      <h3>Blonde Highlight Wig</h3>
+      <p>Soft highlights for a radiant glow</p>
+      <p class="price">₦130,000</p>
+      <a class="buy-btn" href="https://wa.me/2348051234567?text=Hi!%20I%20want%20to%20buy%20the%20Blonde%20Highlight%20Wig.">Buy on WhatsApp</a>
+    </div>
+  </section>
+
+  <footer>© 2025 Prince Catter Hair Factory — All Rights Reserved</footer>
+
+</body>
+</html>

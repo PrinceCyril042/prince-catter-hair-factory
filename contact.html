@@ -5,40 +5,69 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact Us - Prince Catter Hair Factory</title>
   <link rel="stylesheet" href="assets/css/style.css" />
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: url('assets/image/hero-bg.jpg') no-repeat center center/cover;
+      color: #fff;
+    }
+
+    .contact-container {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 60px 20px;
+      max-width: 600px;
+      margin: 120px auto;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    input, textarea {
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1em;
+      outline: none;
+    }
+
+    button {
+      background: #c19a6b;
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 8px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: #a67c52;
+    }
+  </style>
 </head>
 <body>
-  <body>
-  <section class="contact-hero">
-    <div class="contact-overlay">
-      <div class="contact-container">
-        <h1>Contact Us</h1>
-        <p>We’d love to hear from you! Reach out and our team will get back to you shortly.</p>
-
-        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="contact-form">
-          <input type="text" name="name" placeholder="Your Name" required>
-          <input type="email" name="email" placeholder="Your Email" required>
-          <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-          <button type="submit">Send Message</button>
-        </form>
-
-        <div class="contact-info">
-          <p>📞 +971 55 733 8670</p>
-          <p>📧 princecatterhairfactory@gmail.com</p>
-          <div class="social-links">
-            <a href="#">Instagram</a>
-            <a href="#">Facebook</a>
-            <a href="#">TikTok</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-</body>
-
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <p>&copy; 2025 Prince Catter Hair Factory. All rights reserved.</p>
-  </footer>
+  <div class="contact-container">
+    <h2>Contact Prince Catter Hair Factory</h2>
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <input type="text" name="name" placeholder="Full Name" required>
+      <input type="email" name="_replyto" placeholder="Email Address" required>
+      <textarea name="message" placeholder="Your Message..." rows="6" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
 </body>
 </html>

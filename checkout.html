@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout - Prince Catter Hair Factory</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    body {
+      background: #000;
+      color: #fff;
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .checkout-container {
+      max-width: 600px;
+      margin: 100px auto;
+      background: #111;
+      padding: 30px;
+      border-radius: 15px;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: none;
+      border-radius: 8px;
+    }
+
+    button {
+      background: #c19a6b;
+      border: none;
+      color: #fff;
+      padding: 12px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    button:hover {
+      background: #a67c52;
+    }
+  </style>
+</head>
+<body>
+  <div class="checkout-container">
+    <h2>Checkout</h2>
+    <form id="checkoutForm">
+      <input type="text" placeholder="Full Name" required>
+      <input type="email" placeholder="Email Address" required>
+      <input type="text" placeholder="Shipping Address" required>
+      <input type="text" placeholder="City" required>
+      <input type="text" placeholder="Country" required>
+      <button type="submit">Place Order</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById('checkoutForm').addEventListener('submit', e => {
+      e.preventDefault();
+      alert('Thank you for your order! Your beautiful hair will be shipped soon 💖');
+      localStorage.removeItem('cart');
+      window.location.href = 'index.html';
+    });
+  </script>
+</body>
+</html>
