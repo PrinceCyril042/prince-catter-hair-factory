@@ -1498,3 +1498,144 @@ background: url("../images/hero-bg.jpg") center/cover no-repeat;
   width: 35px;
   height: 35px;
 }
+/* === FOOTER SECTION === */
+.footer {
+  background-color: #000;
+  color: #fff;
+  padding: 50px 0 30px;
+  text-align: center;
+  border-top: 2px solid #ffd700;
+}
+
+.footer h3 {
+  color: #ffd700;
+  margin-bottom: 10px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links a {
+  color: #ccc;
+  text-decoration: none;
+  display: block;
+  margin: 5px 0;
+}
+
+.footer-links a:hover {
+  color: #ffd700;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 10px;
+}
+
+.social-icon img {
+  width: 32px;
+  height: 32px;
+  transition: 0.3s ease;
+  filter: brightness(1) drop-shadow(0 0 4px #ffd700);
+}
+
+.social-icon img:hover {
+  transform: scale(1.1);
+  filter: brightness(1.5) drop-shadow(0 0 10px #ffd700);
+}
+
+.footer-bottom {
+  margin-top: 25px;
+  font-size: 14px;
+  color: #888;
+}
+/* Responsive Logo Styling */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-container img {
+  width: 80px;
+  height: auto;
+}
+
+/* Mobile version: stack vertically */
+@media (max-width: 768px) {
+  .logo-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .logo-container img {
+    width: 65px; /* smaller logo for mobile */
+  }
+
+  .logo-container h1 {
+    font-size: 1.2rem;
+    margin: 5px 0 0 0;
+    color: gold; /* keep luxury look */
+  }
+}/* --- Header Logo Styling --- */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.logo {
+  width: 80px;
+  height: auto;
+  animation: fadeInUp 1.2s ease-in-out;
+}
+
+.brand-name {
+  font-family: "Playfair Display", serif; /* Elegant serif font */
+  font-size: 2rem;
+  font-weight: 700;
+  color: gold;
+  letter-spacing: 2px;
+  text-shadow: 0 0 6px rgba(255, 215, 0, 0.6);
+  animation: fadeInDown 1.5s ease-in-out;
+}
+
+/* --- Animations --- */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- Mobile Optimization --- */
+@media (max-width: 768px) {
+  .logo-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .logo {
+    width: 65px;
+  }
+
+  .brand-name {
+    font-size: 1.5rem;
+  }
+}
+
