@@ -12,37 +12,34 @@
   </head>
 
 
+<link rel="stylesheet" href="assets/style.css">
+
 
   <body>
-    <!-- ===== Header Section ===== -->
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- ===== Header Section ===== -->
+<header>
+  <div class="header-top">
+    <div class="brand">
+      <img src="assets/images/logo.png" alt="Prince Catter Hair Factory Logo" class="brand-logo">
+      <h1 class="brand-name">Prince Catter</h1>
+    </div>
 
-
- <header class="header"></header>
- 
-  style="display: flex; justify-content: space-between; align-items: center; padding: 15px 30px; background: #000; color: gold;">
-  <div class="logo">
-    <img src="assets/images/logo.png" alt="Prince Catter Hair Factory Logo" class="brand-logo">
-    <h1 class="brand-name">PCHF</h1>
+    <button onclick="showCart()" class="cart-button">
+      🛒 Cart (<span id="cart-count">0</span>)
+    </button>
   </div>
-  <button onclick="showCart()" style="background: none; border: 1px solid gold; color: gold; padding: 8px 16px; border-radius: 6px; cursor: pointer;">
-    🛒 Cart (<span id="cart-count">0</span>)
-  </button>
+
+  <nav class="main-nav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
 </header>
-
-<nav class="navbar">
-  <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="shop.html">Shop</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</nav>
-
-    </header>
-
-   
+  
     <section class="hero">
       <div class="hero-content">
       <h1 class="hero-title">Luxury Hair, Royal Quality</h1>
@@ -109,26 +106,42 @@
     <button type="submit">Send Message</button>
   </form>
 </section>
-<!-- WhatsApp Floating Chat Button -->
-<a href="https://wa.me/234XXXXXXXXXX" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
-  <img src="assets/images/whatsapp-icon.png" alt="WhatsApp Chat" />
+
+<!-- Floating WhatsApp Button -->
+<a href="https://wa.me/971557338670" class="floating-icon whatsapp" target="_blank">
+  <img src="Assets/images/social/whatsapp.png" alt="WhatsApp">
 </a>
 
+<!-- Floating TikTok Button -->
+<a href="https://www.tiktok.com/@yourusername" class="floating-icon tiktok" target="_blank">
+  <img src="Assets/images/social/tiktok.png" alt="TikTok">
+</a>
   </div>
 </section>
 
     <script src="js/main.js"></script>
     <script src="js/main.js"></script>
 
+
   <footer class="footer">
-  <div class="footer-content">
-    <div class="social-icons">
-      <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
-      <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="https://www.tiktok.com" target="_blank"><i class="fab fa-tiktok"></i></a>
-      <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
-      <a href="https://wa.me/971557338670" target="_blank"><i class="fab fa-whatsapp"></i></a>
-    </div>
+ <div class="social-icons">
+  <a href="#" target="_blank">
+    <img src="Assets/images/social/tiktok.png" alt="TikTok" class="social-icon">
+  </a>
+  <a href="#" target="_blank">
+    <img src="Assets/images/social/instagram.png" alt="Instagram" class="social-icon">
+  </a>
+  <a href="#" target="_blank">
+    <img src="Assets/images/social/facebook.png" alt="Facebook" class="social-icon">
+  </a>
+  <a href="#" target="_blank">
+    <img src="Assets/images/social/twitter.png" alt="Twitter" class="social-icon">
+  </a>
+  <a href="#" target="_blank">
+    <img src="Assets/images/social/whatsapp.png" alt="WhatsApp" class="social-icon">
+  </a>
+</div>
+
     <div class="contact-info">
       <p>Email: <a href="mailto:princecyrilogwudile@gmail.com">princecyrilogwudile@gmail.com</a></p>
     </div>
@@ -138,10 +151,36 @@
   </div>
 </footer>
 
+
+
+
+
         </a>
       </div>
     </div>
   </div>
+<script>
+  let lastScrollY = window.scrollY;
+  const header = document.querySelector("header");
+
+  window.addEventListener("scroll", () => {
+    // Hide header when scrolling down
+    if (window.scrollY > lastScrollY && window.scrollY > 80) {
+      header.classList.add("hidden");
+    } else {
+      header.classList.remove("hidden");
+    }
+
+    // Shrink logo + text on scroll
+    if (window.scrollY > 100) {
+      header.classList.add("shrink");
+    } else {
+      header.classList.remove("shrink");
+    }
+
+    lastScrollY = window.scrollY;
+  });
+</script>
 
   </body>
 </html>

@@ -1,0 +1,73 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+.best-sellers {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.best-sellers h2 {
+  font-size: 2em;
+  margin-bottom: 30px;
+  color: #b88a44; /* gold tone */
+}
+
+.product-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.product {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  width: 280px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.product:hover {
+  transform: translateY(-5px);
+}
+
+.product img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+
+.product h3 {
+  font-size: 1.3em;
+  color: #333;
+  margin: 15px 0 10px;
+}
+
+.product p {
+  font-size: 1.1em;
+  color: #777;
+  margin-bottom: 15px;
+}
+
+.product button {
+  background-color: #b88a44;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 15px;
+  transition: background 0.3s;
+}
+
+.product button:hover {
+  background-color: #a47c3d;
+}
