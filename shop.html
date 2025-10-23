@@ -9,27 +9,31 @@
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <!-- HEADER -->
+
+ <!-- ===== Header Section ===== -->
+<header>
+  <div class="header-top">
+    <div class="brand">
+      <img src="assets/images/logo.png" alt="Prince Catter Hair Factory Logo" class="brand-logo">
+      <h1 class="brand-name">Prince Catter</h1>
+    </div>
+
+    <button onclick="showCart()" class="cart-button">
+      🛒 Cart (<span id="cart-count">0</span>)
+    </button>
+  </div>
+
+  <nav class="main-nav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-
-  <header class="header">
-    <div class="container">
-      <div class="logo-section">
-    
-        <h1 class="brand-name">Prince Catter Hair Factory</h1>
-      </div>
-      <nav class="navbar">
-  <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="shop.html">Shop</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</nav>
-
-  </header>
 
   <section class="shop-section">
   <h2 class="section-title">Our Best Sellers</h2>
@@ -80,13 +84,23 @@
   </div>
 </section>
 </body>
-<!-- WhatsApp Floating Chat Button -->
-<a href="https://wa.me/234XXXXXXXXXX" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
-  <img src="assets/images/whatsapp-icon.png" alt="WhatsApp Chat" />
-</a>
+
 
 </html>
-<footer class="footer">
+<footer <!-- Floating WhatsApp Button -->
+<a href="https://wa.me/971557338670" class="floating-icon whatsapp" target="_blank">
+  <img src="assets/images/social/whatsapp.png" alt="WhatsApp">
+</a>
+
+<!-- Floating TikTok Button -->
+<a href="https://www.tiktok.com/@yourusername" class="floating-icon tiktok" target="_blank">
+  <img src="assets/images/social/tiktok.png" alt="TikTok">
+</a>
+  </div>
+</section>
+
+    <script src="js/main.js"></script>
+    <script src="js/main.js"></script>class="footer">
   <div class="footer-content">
     <div class="social-icons">
       <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
