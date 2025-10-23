@@ -1,88 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Us | Prince Catter Hair Factory</title>
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About – Prince Catter Hair Factory</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-  <!-- HEADER -->
-  <nav>
-    <div class="logo">
-      <img src="assets/image/logo.png" alt="Logo">
-      <h1>Prince Catter Hair Factory</h1>
+  <!-- ===== Header Section ===== -->
+<header>
+  <div class="header-top">
+    <div class="brand">
+      <img src="assets/images/logo.png" alt="Prince Catter Hair Factory Logo" class="brand-logo">
+      <h1 class="brand-name">Prince Catter</h1>
     </div>
+
+    <button onclick="showCart()" class="cart-button">
+      🛒 Cart (<span id="cart-count">0</span>)
+    </button>
+  </div>
+
+  <nav class="main-nav">
     <ul>
-      
-      <nav class="navbar">
-  <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="shop.html">Shop</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</nav>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+  
 
+  <!-- ===== About Banner ===== -->
+  <section class="about-hero">
+    <h2>About Prince Catter Hair Factory</h2>
+    <p>Luxury. Confidence. Royalty. The ultimate destination for every Queen.</p>
+  </section>
 
-  <!-- ABOUT SECTION -->
-  <section class="about">
-    <div class="about-content">
-      <h2>About Prince Catter Hair Factory</h2>
-      <p>At Prince Catter Hair Factory, we believe every queen deserves hair that speaks luxury, confidence, and style. 
-      With years of excellence in the beauty industry, our mission is to deliver premium-quality wigs, extensions, and weaves 
-      that empower women to embrace their elegance.</p>
-
-      <p>We specialize in 100% human hair products that are ethically sourced and meticulously crafted. From smooth 
-      Brazilian textures to glamorous curls, each product is made to perfection, ensuring comfort, beauty, and durability.</p>
-
-      <h3>Our Commitment</h3>
-      <ul>
-        <li>✨ 100% Human Hair Guaranteed</li>
-        <li>🌍 Worldwide Delivery</li>
-        <li>💎 Luxury Quality, Affordable Prices</li>
-        <li>❤️ Exceptional Customer Care</li>
-      </ul>
+  <!-- ===== About Content ===== -->
+  <section class="about-content">
+    <div class="about-text">
+      <h3>Our Story</h3>
+      <p>Prince Catter Hair Factory was founded to bring elegance, quality, and luxury to every woman. 
+      Our mission is to empower confidence and beauty with premium wigs and extensions that feel as royal as they look.est virgin human hair and use expert craftsmanship to ensure every piece represents perfection. 
+      From body waves to bone straight textures — every collection is designed to make you stand out effortlessly.</p>
+    </div>
+    <div class="about-image">
+      <img src="assets/images/hair1.jpg" alt="Luxury Hair Display">
     </div>
   </section>
 
+  <!-- ===== Footer ===== -->
   <footer class="footer">
-  <div class="footer-container">
-    
-    <div class="footer-links">
-      <h3>Quick Links</h3>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="shop.html">Shop</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+    <div class="social-icons">
+      <a href="#" target="_blank"><img src="assets/images/social/facebook.png" alt="Facebook" class="social-icon"></a>
+      <a href="#" target="_blank"><img src="assets/images/social/instagram.png" alt="Instagram" class="social-icon"></a>
+      <a href="#" target="_blank"><img src="assets/images/social/tiktok.png" alt="TikTok" class="social-icon"></a>
+      <a href="#" target="_blank"><img src="assets/images/social/twitter.png" alt="Twitter" class="social-icon"></a>
+      <a href="#" target="_blank"><img src="assets/images/social/whatsapp.png" alt="WhatsApp" class="social-icon"></a>
     </div>
-
-    <div class="footer-social">
-      <h3>Follow Us</h3>
-      <div class="social-icons">
-        <a href="#" class="social-icon">
-          <img src="assets/icons/facebook-gold.png" alt="Facebook">
-        </a>
-        <a href="#" class="social-icon">
-          <img src="assets/icons/instagram-gold.png" alt="Instagram">
-        </a>
-        <a href="#" class="social-icon">
-          <img src="assets/icons/tiktok-gold.png" alt="TikTok">
-        </a>
-        <a href="#" class="social-icon">
-          <img src="assets/icons/twitter-gold.png" alt="Twitter">
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <div class="footer-bottom">
-    <p>© 2025 Prince Catter Hair Factory. All rights reserved.</p>
-  </div>
-</footer>
+    <p>© 2025 Prince Catter Hair Factory. All Rights Reserved.</p>
+  </footer>
 
 </body>
 </html>
