@@ -18,6 +18,28 @@
 
 
 
+<script>
+  // mobile menu toggle
+  (function(){
+    const toggle = document.getElementById('menu-toggle');
+    const mnav   = document.getElementById('mobile-nav');
+    if(!toggle || !mnav) return;
+
+    toggle.addEventListener('click', function(e){
+      mnav.classList.toggle('show');
+      // toggle aria attribute for accessibility
+      mnav.setAttribute('aria-hidden', mnav.classList.contains('show') ? 'false' : 'true');
+    });
+
+    // close the mobile nav when clicking outside
+    document.addEventListener('click', function(e){
+      if(!mnav.classList.contains('show')) return;
+      if(e.target === toggle || mnav.contains(e.target)) return;
+      mnav.classList.remove('show');
+      mnav.setAttribute('aria-hidden', 'true');
+    });
+  })();
+</script>
 
 
 
@@ -45,6 +67,25 @@
     </ul>
   </nav>
 </header>
+
+
+
+
+
+
+<!-- add this inside <header> (right after your existing desktop nav) -->
+<button class="menu-toggle" id="menu-toggle">☰</button>
+
+<!-- mobile-only nav (won't display on desktop) -->
+<nav id="mobile-nav" aria-hidden="true">
+  <a href="index.html">Home</a>
+  <a href="shop.html">Shop</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+
+
   
 
 
