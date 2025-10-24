@@ -3165,6 +3165,92 @@ header {
 
 
 
+/* ===== MOBILE MENU TOGGLE (below 768px) ===== */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: 2px solid gold;
+  color: gold;
+  border-radius: 6px;
+  padding: 6px 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* Default navbar layout (desktop) */
+#navbar {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+#navbar a {
+  color: gold;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+#navbar a:hover {
+  color: white;
+}
+
+/* ----- MOBILE VIEW ----- */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    z-index: 1001;
+  }
+
+  #navbar {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    right: 15px;
+    background: rgba(0, 0, 0, 0.95);
+    border: 1px solid gold;
+    border-radius: 10px;
+    width: 200px;
+    text-align: center;
+    padding: 15px 0;
+    z-index: 1000;
+  }
+
+  #navbar.show {
+    display: flex;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  #navbar a {
+    color: gold;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 215, 0, 0.3);
+  }
+
+  #navbar a:last-child {
+    border-bottom: none;
+  }
+}
+
+
+
+
 
 
 
