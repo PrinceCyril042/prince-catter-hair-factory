@@ -2976,6 +2976,97 @@ header {
 
 
 
+/* ============================
+   📱 MOBILE VERSION FIXES
+   ============================ */
+@media (max-width: 768px) {
+  /* General Page Layout */
+  body {
+    overflow-x: hidden;
+  }
+
+  /* Navigation Fix */
+  nav ul {
+    flex-direction: column;
+    text-align: center;
+    background-color: #000; /* adjust if needed */
+    padding: 10px 0;
+  }
+
+  nav ul li {
+    margin: 8px 0;
+  }
+
+  /* Hero Section / Top Image Section */
+  .hero {
+    background-size: cover;
+    background-position: center;
+    padding: 80px 20px;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .hero p {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  /* About Section */
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .about-container img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+  }
+
+  .about-text {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  /* Footer Section */
+  footer {
+    text-align: center;
+    padding: 20px;
+  }
+
+  footer .social-icons {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  footer .social-icons a {
+    margin: 8px;
+    font-size: 20px;
+  }
+
+  /* Floating Buttons (WhatsApp & TikTok) */
+  .floating-btn {
+    width: 50px;
+    height: 50px;
+    bottom: 20px;
+    right: 20px;
+  }
+
+  .floating-btn img {
+    width: 100%;
+    height: auto;
+  }
+
+  .floating-btn.tiktok {
+    bottom: 80px;
+  }
+}
+
+
 
 
 
