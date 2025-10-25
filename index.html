@@ -15,34 +15,7 @@
 <link rel="stylesheet" href="assets/style.css">
 
 
-
-
-
-<script>
-  // mobile menu toggle
-  (function(){
-    const toggle = document.getElementById('menu-toggle');
-    const mnav   = document.getElementById('mobile-nav');
-    if(!toggle || !mnav) return;
-
-    toggle.addEventListener('click', function(e){
-      mnav.classList.toggle('show');
-      // toggle aria attribute for accessibility
-      mnav.setAttribute('aria-hidden', mnav.classList.contains('show') ? 'false' : 'true');
-    });
-
-    // close the mobile nav when clicking outside
-    document.addEventListener('click', function(e){
-      if(!mnav.classList.contains('show')) return;
-      if(e.target === toggle || mnav.contains(e.target)) return;
-      mnav.classList.remove('show');
-      mnav.setAttribute('aria-hidden', 'true');
-    });
-  })();
 </script>
-
-
-
   <body>
 
   <!-- ===== Header Section ===== -->
@@ -67,9 +40,6 @@
     </ul>
   </nav>
 </header>
-
-
-
 
     <section class="hero">
       <div class="hero-content">
@@ -207,7 +177,15 @@
 
     lastScrollY = window.scrollY;
   });
+
 </script>
 
   </body>
+
+
+  <!-- JS Scripts -->
+<script src="assets/js/main.js"></script>
+
+
+</script>
 </html>

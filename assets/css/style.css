@@ -3148,103 +3148,11 @@ header {
 
 
 
-/* ===== MOBILE FIXES (Below 768px) ===== */
-@media (max-width: 768px) {
-  /* Header layout */
-  header {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  header .top-bar {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  header .logo {
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 10px;
-  }
-
-  header .brand-logo {
-    width: 70px;
-    height: auto;
-  }
-
-  header .brand-name {
-    font-size: 1.4rem;
-    margin-top: 5px;
-  }
-
-  nav.main-nav ul {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    padding: 0;
-    margin: 0;
-  }
-
-  nav.main-nav ul li {
-    display: block;
-  }
-
-  nav.main-nav ul li a {
-    font-size: 1.1rem;
-  }
-
-  /* Cart button */
-  header button {
-    margin-top: 10px;
-    width: 80%;
-    max-width: 200px;
-  }
-
-  /* Hero / main banner section */
-  .hero {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .hero img {
-    width: 100%;
-    height: auto;
-  }
-
-  /* Fix About section image overlap */
-  .about-section img {
-    width: 100%;
-    height: auto;
-    margin-bottom: 20px;
-  }
-
-  /* Social icons */
-  .social-icons {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-  }
-
-  .social-icon {
-    width: 40px;
-    height: 40px;
-  }
-
-  /* Best seller products */
-  .product-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
-  }
-
-  /* Footer text center alignment */
-  footer {
-    text-align: center;
-  }
-}
 
 
  
+
+
 
 
 
