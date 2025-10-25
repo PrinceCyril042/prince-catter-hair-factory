@@ -41,28 +41,6 @@
   </nav>
 </header>
 
-
-
-
-<header>
-  <div class="logo">Prince Catter</div>
-
-  <!-- Mobile Menu Button -->
-  <button class="menu-toggle" id="menu-toggle">☰</button>
-
-  <!-- Navigation Links -->
-  <nav id="navbar">
-    <a href="index.html">Home</a>
-    <a href="shop.html">Shop</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
-
-
-
-
-
     <section class="hero">
       <div class="hero-content">
       <h1 class="hero-title">Luxury Hair, Royal Quality</h1>
@@ -204,23 +182,5 @@
 
 
 <script src="assets/js/main.js"></script>
-  const menuToggle = document.getElementById("menu-toggle");
-  const navbar = document.getElementById("navbar");
-
-  menuToggle.addEventListener("click", () => {
-    navbar.classList.toggle("show");
-  });
-
-  // Optional: close menu when a link is clicked
-  const navLinks = navbar.querySelectorAll("a");
-  navLinks.forEach(link => {
-    link.addEventListener("click", () => {
-      navbar.classList.remove("show");
-    });
-  });
 </script>
-
-
-
-
   </body>
