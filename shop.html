@@ -10,20 +10,21 @@
 </head>
 <body>
 
- <!-- ===== Header Section ===== -->
-<header>
+<!-- ===== START: Site Header (paste into each page) ===== -->
+<header class="site-header">
   <div class="header-top">
-    <div class="brand">
-      <img src="assets/images/logo.png" alt="Prince Catter Hair Factory Logo" class="brand-logo">
-      <h1 class="brand-name">Prince Catter</h1>
+    <div class="brand-left">
+      <img src="assets/images/logo.png" alt="UMU HAIR logo" class="brand-logo">
+      <h1 class="brand-name">UMU HAIR</h1>
     </div>
 
-    <button onclick="showCart()" class="cart-button">
-      🛒 Cart (<span id="cart-count">0</span>)
-    </button>
+    <div class="header-right">
+      <button id="cart-btn" class="cart-btn" onclick="showCart()">🛒 Cart (<span id="cart-count">0</span>)</button>
+      <button id="menu-toggle" class="menu-toggle" aria-label="Toggle menu">☰</button>
+    </div>
   </div>
 
-  <nav class="main-nav">
+  <nav id="main-nav" class="main-nav" aria-label="Main navigation">
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="shop.html">Shop</a></li>
@@ -32,6 +33,10 @@
     </ul>
   </nav>
 </header>
+<!-- ===== END: Site Header ===== -->
+
+
+
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
@@ -108,12 +113,14 @@
       <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
       <a href="https://wa.me/971557338670" target="_blank"><i class="fab fa-whatsapp"></i></a>
     </div>
-    <div class="contact-info">
+
+
+ <div class="contact-info">
       <p>Email: <a href="mailto:princecyrilogwudile@gmail.com">princecyrilogwudile@gmail.com</a></p>
     </div>
-  
-<p class="copyright">
+    <p class="copyright">
       © 2025 Prince Catter Hair Factory. All rights reserved.
     </p>
   </div>
 </footer>
+ 

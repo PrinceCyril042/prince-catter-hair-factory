@@ -1,54 +1,31 @@
-// ===== Simple Cart System =====
-let cart = [];
+/* ===== main.js - mobile menu + floating social handlers ===== */
+document.addEventListener('DOMContentLoaded', function () {
+  const menuToggle = document.getElementById('menu-toggle');
+  const mainNav = document.getElementById('main-nav');
 
-// Select all Add to Cart buttons
-const buttons = document.querySelectorAll(".product button");
+  // toggle mobile nav
+  function toggleNav() {
+    if (!mainNav) return;
+    mainNav.classList.toggle('mobile-open');
+  }
+  if (menuToggle) menuToggle.addEventListener('click', toggleNav);
 
-// When user clicks "Add to Cart"
-buttons.forEach(button => {
-  button.addEventListener("click", () => {
-    const product = button.parentElement;
-    const name = product.querySelector("h3").innerText;
-    const price = product.querySelector("p").innerText;
-    const imgSrc = product.querySelector("img").src;
-
-    const item = { name, price, imgSrc };
-    cart.push(item);
-
-    alert(`${name} added to cart!`);
-    updateCart();
+  // close mobile nav if clicking outside
+  document.addEventListener('click', function (e) {
+    if (!mainNav) return;
+    if (!menuToggle.contains(e.target) && !mainNav.contains(e.target)) {
+      mainNav.classList.remove('mobile-open');
+    }
   });
+
+  // Optional: improve hero background on resize (not required)
+  function adjustHeroPosition() {
+    const hero = document.querySelector('.hero');
+    if (!hero) return;
+    // smaller screens get slightly different focal point
+    if (window.innerWidth < 640) hero.style.backgroundPosition = 'center 35%';
+    else hero.style.backgroundPosition = 'center 28%';
+  }
+  adjustHeroPosition();
+  window.addEventListener('resize', adjustHeroPosition);
 });
-
-// ===== Update Cart Display =====
-function updateCart() {
-  const cartCount = document.querySelector("#cart-count");
-  if (cartCount) {
-    cartCount.innerText = cart.length;
-  }
-}
-
-// ===== Display Cart Items in Popup =====
-function showCart() {
-  if (cart.length === 0) {
-    alert("Your cart is empty!");
-    return;
-  }
-
-  let message = "🛍 Your Cart:\n\n";
-  cart.forEach((item, index) => {
-    message += `${index + 1}. ${item.name} - ${item.price}\n`;
-  });
-
-  message += "\nProceed to checkout?";
-  if (confirm(message)) {
-    checkout();
-  }
-}
-
-// ===== Checkout =====
-function checkout() {
-  alert("Thank you for your order! 🖤 Prince Catter Hair Factory will contact you soon!");
-  cart = [];
-  updateCart();
-}

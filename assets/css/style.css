@@ -3060,6 +3060,223 @@ header {
 
 
 
+/* ===== UMU HAIR - header, nav, hero, product and social styles ===== */
+
+/* --- Header layout --- */
+.site-header {
+  background: #0b0b0b;
+  color: #f5c84c;
+  border-bottom: 1px solid rgba(245,200,76,0.08);
+  position: relative;
+  z-index: 1000;
+}
+.header-top {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding: 14px 24px;
+  max-width:1200px;
+  margin: 0 auto;
+}
+.brand-left {
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+.brand-logo {
+  width:56px;
+  height:auto;
+  display:block;
+  filter: drop-shadow(0 6px 20px rgba(245,200,76,0.35));
+  border-radius:6px;
+}
+.brand-name {
+  font-family: 'Poppins', sans-serif;
+  font-weight:700;
+  color:#f5c84c;
+  margin:0;
+  font-size:22px;
+  letter-spacing:0.6px;
+  text-shadow:0 3px 12px rgba(245,200,76,0.25);
+}
+
+/* Right side: cart + menu toggle (menu-toggle is hidden on large screens) */
+.header-right {
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+.cart-btn {
+  background: transparent;
+  color: #f5c84c;
+  border: 2px solid rgba(245,200,76,0.6);
+  padding:8px 14px;
+  border-radius:8px;
+  cursor:pointer;
+  font-weight:600;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.6);
+}
+.menu-toggle {
+  display:none;
+  background:transparent;
+  color:#f5c84c;
+  border: 2px solid rgba(245,200,76,0.25);
+  padding:8px 12px;
+  border-radius:8px;
+  cursor:pointer;
+}
+
+/* --- Main nav (below header-top) --- */
+.main-nav {
+  max-width:1200px;
+  margin:0 auto;
+  padding: 12px 24px 20px;
+}
+.main-nav ul {
+  list-style:none;
+  padding:0;
+  margin:0;
+  display:flex;
+  gap:28px;
+  justify-content:center; /* keep nav centered under header */
+}
+.main-nav a {
+  color:#fff;
+  text-decoration:none;
+  font-weight:600;
+  opacity:0.95;
+  transition: color .18s, transform .18s;
+}
+.main-nav a:hover { color:#f5c84c; transform:translateY(-1px); }
+
+/* --- hero (safer image placement so eyes not cropped) --- */
+.hero {
+  width:100%;
+  min-height:64vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:#f5c84c;
+  background-size:cover;
+  background-repeat:no-repeat;
+  /* push focal point a little lower to reveal eyes */
+  background-position: center 28%;
+  position:relative;
+  padding: 60px 20px;
+}
+
+/* hero inner content */
+.hero .hero-inner {
+  max-width:900px;
+  z-index:2;
+}
+
+/* --- product grid & images --- */
+.product-grid {
+  display:grid;
+  grid-template-columns: repeat(3,1fr);
+  gap:24px;
+  align-items:start;
+}
+.product {
+  background: rgba(12,12,12,0.6);
+  padding:18px;
+  border-radius:10px;
+  border:1px solid rgba(245,200,76,0.08);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+}
+.product img {
+  display:block;
+  width:100%;
+  height:200px;
+  object-fit:cover;
+  border-radius:8px;
+  margin-bottom:12px;
+}
+
+/* smaller screens: responsive product layout */
+@media (max-width:1000px) {
+  .product-grid { grid-template-columns: repeat(2,1fr); }
+  .hero { min-height:58vh; background-position:center 20%; }
+}
+@media (max-width:640px) {
+  .product-grid { grid-template-columns: 1fr; }
+  .header-top { padding:12px; }
+  .brand-name { font-size:18px; }
+  .brand-logo { width:48px; }
+
+  /* show menu toggle & hide desktop nav */
+  .menu-toggle { display:inline-block; }
+  .main-nav { display:none; }
+
+  /* mobile nav (displayed when active by JS) */
+  .main-nav.mobile-open {
+    display:block;
+    background: linear-gradient(180deg, rgba(0,0,0,0.96), rgba(0,0,0,0.98));
+    padding:18px 24px;
+  }
+  .main-nav.mobile-open ul { display:block; text-align:center; }
+  .main-nav.mobile-open li { margin:14px 0; }
+  .main-nav.mobile-open a {
+    display:inline-block;
+    padding:10px 18px;
+    background: rgba(0,0,0,0.35);
+    border-radius:6px;
+    color:#fff;
+    font-weight:700;
+    width:160px;
+  }
+
+  /* Move the cart button to the right and keep small */
+  .cart-btn { padding:8px 12px; font-size:14px; }
+}
+
+/* --- Social icons glow (footer & floating) --- */
+.footer .social-icon,
+.social-icons .social-icon,
+.floating-social img {
+  width:48px;
+  height:48px;
+  border-radius:50%;
+  background:#0b0b0b;
+  padding:8px;
+  box-shadow: 0 12px 28px rgba(245,200,76,0.25), 0 3px 8px rgba(0,0,0,0.6);
+  transition: transform .18s, box-shadow .18s;
+}
+.footer .social-icon:hover,
+.social-icons .social-icon:hover,
+.floating-social img:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 20px 42px rgba(245,200,76,0.35);
+}
+
+/* --- Floating social buttons (bottom-right) --- */
+.floating-social {
+  position: fixed;
+  right:18px;
+  bottom:18px;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  z-index:1200;
+}
+.floating-social a { display:block; width:64px; height:64px; }
+
+/* simple footer baseline */
+.footer {
+  padding:40px 24px;
+  background:#050505;
+  color:#f5c84c;
+  text-align:center;
+}
+
+/* utility: hide element */
+.hidden { display:none !important; }
+
+
+
+
  
 
 
