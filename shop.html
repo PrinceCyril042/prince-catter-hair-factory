@@ -115,12 +115,45 @@
     </div>
 
 
- <div class="contact-info">
+<div class="contact-info">
       <p>Email: <a href="mailto:princecyrilogwudile@gmail.com">princecyrilogwudile@gmail.com</a></p>
     </div>
     <p class="copyright">
-      © 2025 Prince Catter Hair Factory. All rights reserved.
+      © 2025 Umu Hair. All rights reserved.
     </p>
   </div>
 </footer>
- 
+
+
+      </a>
+      </div>
+    </div>
+  </div>
+<script>
+  let lastScrollY = window.scrollY;
+  const header = document.querySelector("header");
+
+  window.addEventListener("scroll", () => {
+    // Hide header when scrolling down
+    if (window.scrollY > lastScrollY && window.scrollY > 80) {
+      header.classList.add("hidden");
+    } else {
+      header.classList.remove("hidden");
+    }
+
+    // Shrink logo + text on scroll
+    if (window.scrollY > 100) {
+      header.classList.add("shrink");
+    } else {
+      header.classList.remove("shrink");
+    }
+
+    lastScrollY = window.scrollY;
+  });
+
+</script>
+
+
+<script src="assets/js/main.js"></script>
+</script>
+  </body>
