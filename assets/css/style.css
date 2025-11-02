@@ -3277,6 +3277,94 @@ header {
 
 
 
+
+/* Basic header layout */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000;
+  padding: 15px 20px;
+  position: relative;
+  z-index: 100;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #ffd700;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.cart-menu {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Cart button */
+.cart-btn {
+  color: #ffd700;
+  border: 1px solid #ffd700;
+  padding: 6px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+/* Menu toggle button */
+.menu-toggle {
+  background: none;
+  border: 1px solid #ffd700;
+  color: #ffd700;
+  font-size: 1.5rem;
+  padding: 4px 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: none; /* hidden on desktop */
+}
+
+/* Navbar styling */
+nav {
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background-color: #000;
+    padding: 15px;
+    border: 1px solid #ffd700;
+    border-radius: 10px;
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  nav a {
+    padding: 10px 0;
+    color: #fff;
+  }
+}
+
+
  
 
 

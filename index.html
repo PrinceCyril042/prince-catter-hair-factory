@@ -43,6 +43,28 @@
 </header>
 <!-- ===== END: Site Header ===== -->
 
+
+<header>
+  <div class="logo">
+      <img src="assets/images/umulogo.png" alt="UMU HAIR logo" class="brand-logo">
+    <span>UMU HAIR</span>
+  </div>
+
+  <div class="cart-menu">
+    <a href="cart.html" class="cart-btn">🛒 Cart (0)</a>
+    <button class="menu-toggle" id="menu-toggle">☰</button>
+  </div>
+
+  <nav id="navbar">
+    <a href="index.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+
+
 <section class="hero">
       <div class="hero-content">
       <h1 class="hero-title">Luxury Hair, Royal Quality</h1>
@@ -185,6 +207,16 @@
   });
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js" crossorigin="anonymous"></script>
+
+<script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const navbar = document.getElementById('navbar');
+
+  menuToggle.addEventListener('click', () => {
+    navbar.classList.toggle('active');
+  });
+</script>
+
 
 </script>
   </body>
