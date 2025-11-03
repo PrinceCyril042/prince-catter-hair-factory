@@ -3365,6 +3365,20 @@ nav a {
 }
 
 
+.logo img.brand-logo {
+  height: 60px;
+  width: auto;
+  filter: drop-shadow(0 0 10px gold);
+}
+
+.logo span {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: gold;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
+}
+
+
  
 
 
