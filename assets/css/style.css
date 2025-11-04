@@ -3378,50 +3378,19 @@ nav a {
   text-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
 }
 
-/* === Responsive Images Across Website === */
-
-/* Product, Best Seller & General Image Styling */
-.product img,
-.product-image,
-.product-card img,
-.best-seller img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 8px; /* smooth corners */
+/* Shift the entire logo section to the left */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: flex-start; /* ensures it stays to the left */
+  margin-left: 20px; /* adjust spacing from the edge */
 }
 
-/* About Section Image */
-.about img,
-.about-image {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-  object-fit: cover;
-}
-
-/* Ensure mobile responsiveness */
+/* Optional fine-tuning for mobile */
 @media (max-width: 768px) {
-  .product,
-  .product-card,
-  .best-seller {
-    width: 100%;
-    margin: 10px 0;
-  }
-
-  .product img,
-  .product-card img,
-  .best-seller img,
-  .about img {
-    max-height: 350px; /* adjust height as desired */
-  }
-
-  /* Optional: stack About section content vertically */
-  .about {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+  .logo {
+    margin-left: 10px; /* slightly smaller margin for phones */
   }
 }
 
