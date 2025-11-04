@@ -3395,6 +3395,15 @@ nav a {
 }
 
 
+
+
+@media (max-width: 768px) {
+  .social-icons {
+    display: flex;
+  }
+}
+
+
  
 
 
