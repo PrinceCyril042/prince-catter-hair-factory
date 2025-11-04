@@ -3404,6 +3404,25 @@ nav a {
 }
 
 
+/* Main Typography Setup */
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* Headings & Logo */
+h1, h2, h3, h4, h5, h6, .logo, .brand-name {
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 0.5px;
+}
+
+/* Buttons & Navigation */
+button, nav, a {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+}
+
  
 
 
