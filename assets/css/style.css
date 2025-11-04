@@ -3594,10 +3594,7 @@ footer i:hover {
 .site-header {
   background-color: #000;
   color: #fff;
-  padding: 15px 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding: 15px 25px;
   border-bottom: 1px solid #d4af37;
 }
 
@@ -3605,18 +3602,21 @@ footer i:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
   max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
 }
 
 .logo img {
-  height: 55px;
+  height: 60px;
+  margin-right: auto;
 }
 
 /* ===== Nav Links ===== */
 .main-nav ul {
   list-style: none;
   display: flex;
+  align-items: center;
   gap: 25px;
   margin: 0;
   padding: 0;
@@ -3632,11 +3632,28 @@ footer i:hover {
   color: #d4af37;
 }
 
+/* ===== Cart Button ===== */
+.cart-btn {
+  background-color: transparent;
+  border: 1px solid #d4af37;
+  color: #d4af37;
+  padding: 6px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.cart-btn:hover {
+  background-color: #d4af37;
+  color: #000;
+}
+
 /* ===== Mobile Toggle ===== */
 .menu-toggle {
   background: none;
   border: none;
-  font-size: 28px;
+  font-size: 30px;
   color: #fff;
   cursor: pointer;
   display: none;
@@ -3653,12 +3670,13 @@ footer i:hover {
     flex-direction: column;
     position: absolute;
     top: 70px;
-    right: 20px;
+    right: 10px;
     background-color: #000;
-    width: 180px;
     border: 1px solid #d4af37;
-    border-radius: 8px;
+    border-radius: 10px;
+    width: 200px;
     padding: 15px 0;
+    z-index: 999;
   }
 
   .main-nav ul {
@@ -3669,4 +3687,6 @@ footer i:hover {
   .main-nav.show {
     display: flex;
   }
+}
+
 }
