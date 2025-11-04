@@ -1,22 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About – Prince Catter Hair Factory</title>
-  <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LA BELLA HAIR</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+    <!-- Remix Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+
+    <!-- Main CSS (use only one) -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+</script>
+  <body>
 
 <!-- ===== START: Site Header (paste into each page) ===== -->
 <header class="site-header">
-  <div class="header-top">
-    <div class="brand-left">
-      <img src="assets/images/la-bella-hair-logo.png" alt="UMU HAIR logo" class="brand-logo">
-    </div>
 
-    </div>
+  <div class="logo">
+  <img src="assets/images/la-bella-hair-logo.jpg" alt="LA BELLA HAIR Logo" class="brand-logo" />
+  
+</div>
     <div class="header-right">
       <button id="cart-btn" class="cart-btn" onclick="showCart()">🛒 Cart (<span id="cart-count">0</span>)</button>
       <button id="m
@@ -27,8 +34,7 @@ enu-toggle" class="menu-toggle" aria-label="Toggle menu">☰</button>
 
   <nav id="main-nav" class="main-nav" aria-label="Main navigation">
     <ul>
-      <li><a href="index.html">Home</a>
-  </div></li>
+      <li><a href="index.html">Home</a></li>
       <li><a href="shop.html">Shop</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="contact.html">Contact</a></li>
@@ -38,14 +44,11 @@ enu-toggle" class="menu-toggle" aria-label="Toggle menu">☰</button>
 <!-- ===== END: Site Header ===== -->
 
   
-
-  <!-- ===== About Banner ===== -->
-  <section class="about-hero">
-    <section class="about">
+<section class="about">
   <div class="about-container">
-    <img src="assets/images/hair2.jpg" alt="About Umu Hair">
+    <img src="assets/images/hair2.jpg" alt="LA BELLA HAIR">
     <div class="about-text">
-      <h2>ABOUT LA BELLA HAIR</h2>
+       <h2>ABOUT LA BELLA HAIR</h2>
       <p>
         At <strong>La Bella Hair</strong>, we believe every queen deserves hair that speaks luxury and confidence. 
         From natural human hair wigs to premium extensions, we handcraft each product with precision and elegance. 
@@ -55,26 +58,77 @@ enu-toggle" class="menu-toggle" aria-label="Toggle menu">☰</button>
     </div>
   </div>
 </section>
+
+
    
-  <!-- ===== Footer ===== -->
-  <footer class="footer">
-    <div class="social-icons">
-      <a href="#" target="_blank"><img src="assets/images/social/facebook.png" alt="Facebook" class="social-icon"></a>
-      <a href="#" target="_blank"><img src="assets/images/social/instagram.png" alt="Instagram" class="social-icon"></a>
-      <a href="#" target="_blank"><img src="assets/images/social/tiktok.png" alt="TikTok" class="social-icon"></a>
-      <a href="#" target="_blank"><img src="assets/images/social/twitter.png" alt="Twitter" class="social-icon"></a>
-      <a href="#" target="_blank"><img src="assets/images/social/whatsapp.png" alt="WhatsApp" class="social-icon"></a>
-    </div>
+  <!-- Floating WhatsApp Button -->
+<a href="https://wa.me/971557338670" class="floating-icon whatsapp" target="_blank">
+  <img src="assets/images/social/whatsapp.png" alt="WhatsApp">
+</a>
+
+    <script src="js/main.js"></script>
+    <script src="js/main.js"></script>
 
 
-  <div class="contact-info">
-      <p>Email: <a href="mailto:princecyrilogwudile@gmail.com">princecyrilogwudile@gmail.com</a></p>
+<footer class="footer">
+  <div class="footer-content">
+    <h2 class="footer-logo">La Bella Hair</h2>
+    <p class="footer-text">Luxury begins with confidence — La Bella Hair brings out your royal beauty.</p>
+
+    <div class="footer-socials">
+      <a href="#" class="social-icon"><i class="ri-instagram-line"></i></a>
+      <a href="#" class="social-icon"><i class="ri-tiktok-line"></i></a>
+      <a href="#" class="social-icon"><i class="ri-twitter-fill"></i></a>
+      <a href="#" class="social-icon"><i class="ri-facebook-fill"></i></a>
+      <a href="https://wa.me/000000000000" target="_blank" class="social-icon"><i class="ri-whatsapp-line"></i></a>
     </div>
-    <p class="copyright">
-      © 2025 LA BELLA HAIR. All rights reserved.
+
+    <p class="footer-email">
+      <i class="ri-mail-line"></i> contact@labellahair.com
     </p>
+
+    <p class="footer-rights">© 2025 La Bella Hair. All Rights Reserved.</p>
   </div>
 </footer>
 
+
+
+        </a>
+      </div>
+    </div>
+  </div>
+<script>
+  let lastScrollY = window.scrollY;
+  const header = document.querySelector("header");
+
+  window.addEventListener("scroll", () => {
+    // Hide header when scrolling down
+    if (window.scrollY > lastScrollY && window.scrollY > 80) {
+      header.classList.add("hidden");
+    } else {
+      header.classList.remove("hidden");
+    }
+
+    // Shrink logo + text on scroll
+    if (window.scrollY > 100) {
+      header.classList.add("shrink");
+    } else {
+      header.classList.remove("shrink");
+    }
+
+    lastScrollY = window.scrollY;
+  });
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js" crossorigin="anonymous"></script>
+
+<script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const navbar = document.getElementById('navbar');
+
+  menuToggle.addEventListener('click', () => {
+    navbar.classList.toggle('active');
+  });
+
+</script>
 </body>
 </html>

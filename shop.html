@@ -1,23 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shop - Prince Catter Hair Factory</title>
-  <link rel="stylesheet" href="assets/css/style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LA BELLA HAIR</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+    <!-- Remix Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+
+    <!-- Main CSS (use only one) -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+</script>
+  <body>
+
 
 <!-- ===== START: Site Header (paste into each page) ===== -->
 <header class="site-header">
-  <div class="header-top">
-    <div class="brand-left">
-      <img src="assets/images/la-bella-hair-logo.png" alt="LA BELLA HAIR Logo" class="brand-logo" />
-    </div>
 
-  </div>
+  <div class="logo">
+  <img src="assets/images/la-bella-hair-logo.jpg" alt="LA BELLA HAIR Logo" class="brand-logo" />
+  
+</div>
     <div class="header-right">
       <button id="cart-btn" class="cart-btn" onclick="showCart()">🛒 Cart (<span id="cart-count">0</span>)</button>
       <button id="m
@@ -36,8 +43,6 @@ enu-toggle" class="menu-toggle" aria-label="Toggle menu">☰</button>
   </nav>
 </header>
 <!-- ===== END: Site Header ===== -->
-
-
 
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -99,33 +104,36 @@ enu-toggle" class="menu-toggle" aria-label="Toggle menu">☰</button>
   <img src="assets/images/social/whatsapp.png" alt="WhatsApp">
 </a>
 
-<!-- Floating TikTok Button -->
-<a href="https://www.tiktok.com/@yourusername" class="floating-icon tiktok" target="_blank">
-  <img src="assets/images/social/tiktok.png" alt="TikTok">
-</a>
-  </div>
-</section>
 
-    
+
+    <script src="js/main.js"></script>
+    <script src="js/main.js"></script>
+
+
+<footer class="footer">
   <div class="footer-content">
-    <div class="social-icons">
-      <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
-      <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="https://www.tiktok.com" target="_blank"><i class="fab fa-tiktok"></i></a>
-      <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
-      <a href="https://wa.me/971557338670" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    <h2 class="footer-logo">La Bella Hair</h2>
+    <p class="footer-text">Luxury begins with confidence — La Bella Hair brings out your royal beauty.</p>
+
+    <div class="footer-socials">
+      <a href="#" class="social-icon"><i class="ri-instagram-line"></i></a>
+      <a href="#" class="social-icon"><i class="ri-tiktok-line"></i></a>
+      <a href="#" class="social-icon"><i class="ri-twitter-fill"></i></a>
+      <a href="#" class="social-icon"><i class="ri-facebook-fill"></i></a>
+      <a href="https://wa.me/000000000000" target="_blank" class="social-icon"><i class="ri-whatsapp-line"></i></a>
     </div>
 
- <div class="contact-info">
-      <p>Email: <a href="mailto:princecyrilogwudile@gmail.com">princecyrilogwudile@gmail.com</a></p>
-    </div>
-    <p class="copyright">
-      © 2025 LA BELLA HAIR. All rights reserved.
+    <p class="footer-email">
+      <i class="ri-mail-line"></i> contact@labellahair.com
     </p>
+
+    <p class="footer-rights">© 2025 La Bella Hair. All Rights Reserved.</p>
   </div>
 </footer>
 
-      </a>
+
+
+        </a>
       </div>
     </div>
   </div>
@@ -151,9 +159,16 @@ enu-toggle" class="menu-toggle" aria-label="Toggle menu">☰</button>
     lastScrollY = window.scrollY;
   });
 
-</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js" crossorigin="anonymous"></script>
 
+<script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const navbar = document.getElementById('navbar');
 
-<script src="assets/js/main.js"></script>
+  menuToggle.addEventListener('click', () => {
+    navbar.classList.toggle('active');
+  });
+
 </script>
-  </body>
+  </body> 
+ 
