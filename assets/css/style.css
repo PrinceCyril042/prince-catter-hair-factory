@@ -3541,152 +3541,246 @@ button, nav, a {
 
 
 
-/* ===== FIX FOOTER ALIGNMENT ON SHOP PAGE ===== */
-footer {
-  width: 100%;
-  margin: 0;
-  padding: 40px 0;
-  background-color: #000;
-  text-align: center;
-  color: #fff;
-  border-top: 1px solid #d4af37;
-}
-
-/* Prevent shop container from limiting footer width */
-.shop-page footer,
-.shop-section footer {
-  max-width: 100% !important;
-  padding: 0 !important;
-  margin: 0 !important;
-}
-
-/* Ensure parent containers don't clip the footer */
-section.shop, .shop-container {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-/* If your footer is inside another wrapper, center it properly */
-footer .footer-content {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-/* Optional: glow effect consistency */
-footer i {
-  color: #d4af37;
-  text-shadow: 0 0 8px rgba(212, 175, 55, 0.7);
-  transition: transform 0.3s ease;
-}
-
-footer i:hover {
-  transform: scale(1.1);
-  color: #fff;
-}
-
-
-
-
-
-/* ===== Header Styling ===== */
+  /* ===== HEADER FIXED LAYOUT ===== */
 .site-header {
   background-color: #000;
   color: #fff;
-  padding: 15px 25px;
-  border-bottom: 1px solid #d4af37;
+  padding: 15px 30px;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .header-container {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  position: relative;
+  justify-content: space-between;
 }
 
+/* LOGO */
 .logo img {
   height: 60px;
-  margin-right: auto;
+  width: auto;
+  cursor: pointer;
 }
 
-/* ===== Nav Links ===== */
+/* NAVIGATION */
 .main-nav ul {
-  list-style: none;
   display: flex;
-  align-items: center;
-  gap: 25px;
+  list-style: none;
   margin: 0;
   padding: 0;
+  gap: 25px;
 }
 
 .main-nav a {
   color: #fff;
   text-decoration: none;
   font-weight: 500;
+  transition: color 0.3s ease;
 }
 
 .main-nav a:hover {
-  color: #d4af37;
+  color: #ff007f;
 }
 
-/* ===== Cart Button ===== */
+/* CART ICON (RIGHT END) */
+.cart-icon {
+  margin-left: auto;
+}
+
 .cart-btn {
-  background-color: transparent;
-  border: 1px solid #d4af37;
-  color: #d4af37;
-  padding: 6px 14px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 14px;
-  transition: all 0.3s ease;
-}
-
-.cart-btn:hover {
-  background-color: #d4af37;
-  color: #000;
-}
-
-/* ===== Mobile Toggle ===== */
-.menu-toggle {
   background: none;
   border: none;
-  font-size: 30px;
   color: #fff;
+  font-size: 24px;
   cursor: pointer;
-  display: none;
 }
 
-/* ===== Mobile Styles ===== */
+/* MENU TOGGLE FOR MOBILE */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
+  .header-container {
+    flex-wrap: wrap;
   }
 
   .main-nav {
+    width: 100%;
     display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 70px;
-    right: 10px;
-    background-color: #000;
-    border: 1px solid #d4af37;
-    border-radius: 10px;
-    width: 200px;
-    padding: 15px 0;
-    z-index: 999;
   }
 
   .main-nav ul {
     flex-direction: column;
-    gap: 10px;
+    align-items: center;
+    gap: 20px;
+    margin-top: 15px;
   }
 
-  .main-nav.show {
-    display: flex;
+  .main-nav.active {
+    display: block;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .cart-icon {
+    order: -1;
+    margin-bottom: 10px;
   }
 }
 
+
+
+
+
+
+
+/* ===== STRONG HEADER LAYOUT (force-left logo / center nav / right cart) ===== */
+
+/* container */
+.header-container {
+  display: flex !important;
+  align-items: center !important;
+  gap: 20px !important;
+  width: 100% !important;
+  padding: 12px 28px !important;
+  box-sizing: border-box !important;
+}
+
+/* logo: keep at left */
+.header-container > .logo {
+  flex: 0 0 auto !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+}
+
+/* logo image sizing */
+.header-container > .logo img.brand-logo {
+  height: 60px !important;
+  width: auto !important;
+  display: block !important;
+}
+
+/* navigation: take remaining space and center items */
+.header-container > nav.main-nav {
+  flex: 1 1 auto !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+/* nav list: horizontal */
+.header-container > nav.main-nav ul {
+  display: flex !important;
+  gap: 28px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none !important;
+}
+
+/* nav links */
+.header-container > nav.main-nav ul li a {
+  color: #fff !important;
+  text-decoration: none !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.2px !important;
+  padding: 6px 4px !important;
+}
+
+/* cart: push to extreme right */
+.header-container > .cart-icon {
+  flex: 0 0 auto !important;
+  margin-left: 20px !important;     /* gives a little gap between nav and cart */
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+}
+
+/* cart button style - small basket icon only on desktop */
+.cart-btn {
+  background: none !important;
+  border: 1px solid rgba(255,215,0,0.25) !important; /* subtle gold border */
+  color: #ffd54a !important;
+  padding: 8px 12px !important;
+  border-radius: 8px !important;
+  font-size: 18px !important;
+  cursor: pointer !important;
+}
+
+/* make cart show only basket on mobile (controlled below) */
+@media (max-width: 1024px) {
+  .cart-btn {
+    font-size: 20px !important;
+  }
+}
+
+/* ===== MOBILE: show toggle, hide nav until open ===== */
+.menu-toggle {
+  display: none !important; /* default hidden on desktop */
+  background: none !important;
+  border: none !important;
+  font-size: 28px !important;
+  color: #fff !important;
+  cursor: pointer !important;
+}
+
+/* responsive adjustments */
+@media (max-width: 768px) {
+  .header-container {
+    padding: 14px 18px !important;
+  }
+
+  /* show menu toggle */
+  .menu-toggle {
+    display: block !important;
+    order: 2 !important;
+    margin-left: 10px !important;
+  }
+
+  /* make cart at far right above nav */
+  .cart-icon {
+    order: 3 !important;
+    margin-left: auto !important;
+  }
+
+  /* nav hidden by default on mobile; will show when .active added */
+  nav.main-nav {
+    display: none !important;
+    width: 100% !important;
+    order: 4 !important;
+    margin-top: 10px !important;
+  }
+
+  nav.main-nav.active {
+    display: block !important;
+  }
+
+  nav.main-nav ul {
+    flex-direction: column !important;
+    gap: 16px !important;
+    align-items: center !important;
+  }
+
+  /* On mobile show cart as simple icon (basket) only */
+  .cart-btn {
+    padding: 10px !important;
+    font-size: 20px !important;
+  }
+
+  /* tighten logo on mobile */
+  .logo img.brand-logo {
+    height: 46px !important;
+  }
 }

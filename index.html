@@ -17,58 +17,38 @@
 </script>
   <body>
 
-<!-- ===== START: Site Header (paste into each page) ===== -->
-<header class="site-header">
 
-  <div class="logo">
-  <img src="assets/images/la-bella-hair-logo.jpg" alt="LA BELLA HAIR Logo" class="brand-logo" />
-  
-</div>
-    <div class="header-right">
-      <button id="cart-btn" class="cart-btn" onclick="showCart()">🛒 Cart (<span id="cart-count">0</span>)</button>
-      <button id="m
-</div>
-enu-toggle" class="menu-toggle" aria-label="Toggle menu">☰</button>
-    </div>
-  </div>
-
-  <nav id="main-nav" class="main-nav" aria-label="Main navigation">
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="shop.html">Shop</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-</header>
-<!-- ===== END: Site Header ===== -->
 
 
 
 <!-- ===== START: Site Header ===== -->
 <header class="site-header">
   <div class="header-container">
+    <!-- Logo (Left) -->
     <div class="logo">
       <img src="assets/images/la-bella-hair-logo.jpg" alt="La Bella Hair Logo" class="brand-logo" />
     </div>
 
+    <!-- Center Navigation -->
     <nav id="main-nav" class="main-nav">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="shop.html">Shop</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
-        <li>
-          <button id="cart-btn" class="cart-btn" onclick="showCart()">🛒 Cart (<span id="cart-count">0</span>)</button>
-        </li>
       </ul>
     </nav>
 
+    <!-- Cart (Right) -->
+    <div class="cart-icon">
+      <button id="cart-btn" class="cart-btn" onclick="showCart()">🛒</button>
+    </div>
+
+    <!-- Mobile Menu Button -->
     <button id="menu-toggle" class="menu-toggle" aria-label="Toggle menu">☰</button>
   </div>
 </header>
 <!-- ===== END: Site Header ===== -->
-
 
 
 
@@ -78,9 +58,8 @@ enu-toggle" class="menu-toggle" aria-label="Toggle menu">☰</button>
         <p>
           Premium wigs, extensions, and haircare products — crafted to
           perfection.
-        </p>
+          </p>  
       <a href="products.html" class="btn">Shop Now</a>
-
       </div>
     </section>
 
@@ -200,15 +179,11 @@ enu-toggle" class="menu-toggle" aria-label="Toggle menu">☰</button>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js" crossorigin="anonymous"></script>
 
 <script>
-  document.addEventListener("DOMContentLoaded", function() {
-    const toggle = document.getElementById("menu-toggle");
-    const nav = document.getElementById("main-nav");
+  const menuToggle = document.getElementById("menu-toggle");
+  const navCartWrapper = document.querySelector(".nav-cart-wrapper");
 
-    toggle.addEventListener("click", function() {
-      nav.classList.toggle("show");
-    });
+  menuToggle.addEventListener("click", () => {
+    navCartWrapper.classList.toggle("active");
   });
 </script>
-
-
   </body>
