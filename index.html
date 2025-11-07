@@ -37,9 +37,12 @@
     </nav>
 
     <!-- Cart (Right) -->
-    <div class="cart-icon">
-      <button id="cart-btn" class="cart-btn" onclick="showCart()">🛒</button>
-    </div>
+    <button id="cart-btn" class="cart-btn">🛒 Cart (<span id="cart-count">0</span>)</button>
+
+
+   <button id="clear-cart" class="cart-btn">🧹 Clear Cart</button>
+
+   
 
     <!-- Mobile Menu Button -->
     <button id="menu-toggle" class="menu-toggle" aria-label="Toggle menu">☰</button>
@@ -74,76 +77,95 @@
 
 
 
-<!-- ===== OUR BEST SELLERS SECTION ===== -->
-<section id="best-sellers">
-  <div class="container">
-    <h2>Our Best Sellers</h2>
-    <div class="products-grid">
+<!-- ===== START: OUR BEST SELLER ===== -->
+<section class="best-seller">
+  <h2>OUR BEST SELLER</h2>
+  <div class="product-grid">
 
-      <div class="product-card">
-        <img src="assets/images/products/wig1.PNG" alt="Luxury Straight Wig">
-        <h3>Luxury Straight Wig</h3>
-        <p>Length: 20”</p>
-      </div>
-
-      <div class="product-card">
-        <img src="assets/images/products/wig2.PNG" alt="Deep Wave Wig">
-        <h3>Deep Wave Wig</h3>
-        <p>Length: 18”</p>
-      </div>
-
-      <div class="product-card">
-        <img src="assets/images/products/wig3.jpg" alt="Body Wave Wig">
-        <h3>Body Wave Wig</h3>
-        <p>Length: 22”</p>
-      </div>
-
-      <div class="product-card">
-        <img src="assets/images/products/wig4.jpg" alt="Blonde Highlight Wig">
-        <h3>Blonde Highlight Wig</h3>
-        <p>Length: 16”</p>
-      </div>
-
-      <div class="product-card">
-        <img src="assets/images/products/wig5.jpg" alt="Pixie Cut Wig">
-        <h3>Pixie Cut Wig</h3>
-        <p>Length: 12”</p>
-      </div>
-
-      <div class="product-card">
-        <img src="assets/images/products/wig6.jpg" alt="Loose Curl Wig">
-        <h3>Loose Curl Wig</h3>
-        <p>Length: 20”</p>
-      </div>
-
-      <div class="product-card">
-        <img src="assets/images/products/wig7.jpg" alt="Natural Black Wig">
-        <h3>Natural Black Wig</h3>
-        <p>Length: 24”</p>
-      </div>
-
-      <div class="product-card">
-        <img src="assets/images/products/wig8.jpg" alt="Brown Ombre Wig">
-        <h3>Brown Ombre Wig</h3>
-        <p>Length: 18”</p>
-      </div>
-
-      <div class="product-card">
-        <img src="assets/images/products/wig9.jpg" alt="Curly Lace Wig">
-        <h3>Curly Lace Wig</h3>
-        <p>Length: 22”</p>
-      </div>
-
-      <div class="product-card">
-        <img src="assets/images/products/wig10.PNG" alt="Frontal Straight Wig">
-        <h3>Frontal Straight Wig</h3>
-        <p>Length: 26”</p>
-      </div>
-
+    <div class="product">
+      <img src="assets/images/products/wig1.PNG" alt="Luxury Body Wave Wig">
+      <h3>Luxury Body Wave Wig</h3>
+      <p>Size: 22 inches</p>
+      <p class="product-price">$180</p>
+      <button class="add-to-cart">🛒 Add to Cart</button>
     </div>
+
+    <div class="product">
+      <img src="assets/images/products/wig2.PNG" alt="Bone Straight Hair Wig">
+      <h3>Bone Straight Hair Wig</h3>
+      <p>Size: 24 inches</p>
+      <p class="product-price">$180</p>
+      <button class="add-to-cart">🛒 Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <img src="assets/images/products/wig3.PNG" alt="Deep Curly Wig">
+      <h3>Deep Curly Wig</h3>
+      <p>Size: 20 inches</p>
+      <p class="product-price">$180</p>
+      <button class="add-to-cart">🛒 Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <img src="assets/images/products/wig4.jpg" alt="Pixie Cut Wig">
+      <h3>Pixie Cut Wig</h3>
+      <p>Size: 12 inches</p>
+      <p class="product-price">$180</p>
+      <button class="add-to-cart">🛒 Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <img src="assets/images/products/wig5.PNG" alt="Blonde Highlight Wig">
+      <h3>Blonde Highlight Wig</h3>
+      <p>Size: 18 inches</p>
+      <p class="product-price">$180</p>
+      <button class="add-to-cart">🛒 Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <img src="assets/images/products/wig6.jpg" alt="Frontal Wig">
+      <h3>13x4 Frontal Wig</h3>
+      <p>Size: 22 inches</p>
+      <p class="product-price">$180</p>
+      <button class="add-to-cart">🛒 Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <img src="assets/images/products/wig7.jpg" alt="Curly Wave Wig">
+      <h3>Curly Wave Wig</h3>
+      <p>Size: 20 inches</p>
+      <p class="product-price">$180</p>
+      <button class="add-to-cart">🛒 Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <img src="assets/images/products/wig8.jpg" alt="Straight Lace Wig">
+      <h3>Straight Lace Wig</h3>
+      <p>Size: 26 inches</p>
+      <p class="product-price">$180</p>
+      <button class="add-to-cart">🛒 Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <img src="assets/images/products/wig11.jpg" alt="Luxury Full Wig">
+      <h3>Luxury Full Wig</h3>
+      <p>Size: 24 inches</p>
+      <p class="product-price">$180</p>
+      <button class="add-to-cart">🛒 Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+  <img src="assets/images/products/wig10.jpg" alt="Luxury Body Wave Wig" class="product-image" />
+  <h3 class="product-name">Luxury Body Wave Wig</h3>
+  <p class="product-size">Size: 24 inches</p>
+  <p class="product-price">$180</p>
+  <button class="add-to-cart">🛒 Add to Cart</button>
+</div>
+
+
   </div>
 </section>
-<!-- ===== END BEST SELLERS ===== -->
+<!-- ===== END: OUR BEST SELLER ===== -->
 
 
 <section class="about-section">
@@ -184,11 +206,17 @@
         </form>
       </div>
 
-      <div class="contact-info">
-        <p>La Bella Hair is always available to respond to your inquiries and provide the best assistance possible.</p>
-        <p>📍 Dubai, United Arab Emirates</p>
-        <p>📞 +971 55 733 8670</p>
-        <p>✉️ contact@labellahair.com</p>
+      <!-- Contact Details -->
+      <div class="text-center md:text-left space-y-6">
+        <p class="text-lg md:text-xl font-semibold leading-relaxed">
+          La Bella Hair is always available to respond to your inquiries and provide the best assistance possible. 
+          Your satisfaction is our priority.
+        </p>
+        <div class="font-semibold space-y-2">
+          <p>📍 Dubai, United Arab Emirates</p>
+          <p>📞 +971 55 733 8670</p>
+          <p>✉️ contact@labellahair.com</p>
+        </div>
       </div>
     </div>
   </div>
@@ -264,4 +292,215 @@
     navCartWrapper.classList.toggle("active");
   });
 </script>
+
+
+<script>
+  // Load saved cart count from localStorage or start from 0
+  let cartCount = localStorage.getItem('cartCount') ? parseInt(localStorage.getItem('cartCount')) : 0;
+  const cartCountElement = document.getElementById('cart-count');
+  const addToCartButtons = document.querySelectorAll('.add-to-cart');
+
+  // Display saved count on page load
+  cartCountElement.textContent = cartCount;
+
+  // Function to update cart
+  function updateCart() {
+    cartCount++;
+    cartCountElement.textContent = cartCount;
+    localStorage.setItem('cartCount', cartCount); // save count persistently
+  }
+
+  // Add click events to all buttons
+  addToCartButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      updateCart();
+      button.textContent = "✅ Added!";
+      setTimeout(() => {
+        button.textContent = "🛒 Add to Cart";
+      }, 1200);
+    });
+  });
+</script>
+
+<script>
+  const clearCartButton = document.getElementById('clear-cart');
+  if (clearCartButton) {
+    clearCartButton.addEventListener('click', () => {
+      cartCount = 0;
+      cartCountElement.textContent = cartCount;
+      localStorage.removeItem('cartCount');
+    });
+  }
+</script>
+
+
+
+<script>
+  const addToCartButtons = document.querySelectorAll('.add-to-cart');
+  const cartCountElement = document.getElementById('cart-count');
+
+  // Load cart from localStorage or initialize empty
+  let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+  // Show saved cart count on load
+  updateCartCount();
+
+  // Add product to cart
+  addToCartButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const productCard = button.closest('.product-card');
+      const name = productCard.querySelector('.product-name').textContent;
+      const price = productCard.querySelector('.product-price').textContent;
+      const image = productCard.querySelector('.product-image').src;
+
+      const item = { name, price, image };
+
+      // Check if item already exists in cart
+      const existingItem = cart.find(i => i.name === name);
+      if (!existingItem) {
+        cart.push(item);
+        localStorage.setItem('cart', JSON.stringify(cart));
+        updateCartCount();
+        button.textContent = "✅ Added!";
+        setTimeout(() => (button.textContent = "🛒 Add to Cart"), 1200);
+      } else {
+        button.textContent = "✔ Already Added";
+        setTimeout(() => (button.textContent = "🛒 Add to Cart"), 1200);
+      }
+    });
+  });
+
+  // Update count display
+  function updateCartCount() {
+    cartCountElement.textContent = cart.length;
+  }
+
+  // Clear cart (optional)
+  const clearCartButton = document.getElementById('clear-cart');
+  if (clearCartButton) {
+    clearCartButton.addEventListener('click', () => {
+      cart = [];
+      localStorage.removeItem('cart');
+      updateCartCount();
+    });
+  }
+</script>
+
+
+
+
+<script>
+  const cartDrawer = document.getElementById('cart-drawer');
+  const cartItemsContainer = document.getElementById('cart-items');
+  const closeCartBtn = document.getElementById('close-cart');
+  const clearCartBtn = document.getElementById('clear-cart');
+  const cartBtn = document.getElementById('cart-btn'); // Your 🛒 button in header
+
+  // 🧺 Open the Cart Drawer
+  cartBtn.addEventListener('click', () => {
+    cartDrawer.classList.add('active');
+    loadCartItems();
+  });
+
+  // ❌ Close Cart Drawer
+  closeCartBtn.addEventListener('click', () => {
+    cartDrawer.classList.remove('active');
+  });
+
+  // 🧹 Clear Cart
+  clearCartBtn.addEventListener('click', () => {
+    localStorage.removeItem('cart');
+    loadCartItems();
+  });
+
+  // Load Cart Items
+  function loadCartItems() {
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    cartItemsContainer.innerHTML = "";
+
+    if (cart.length === 0) {
+      cartItemsContainer.innerHTML = "<p>Your cart is empty.</p>";
+      return;
+    }
+
+    cart.forEach(item => {
+      const div = document.createElement('div');
+      div.classList.add('cart-item');
+      div.innerHTML = `
+        <img src="${item.image}" alt="${item.name}">
+        <div>
+          <h3>${item.name}</h3>
+          <p>${item.price}</p>
+        </div>
+      `;
+      cartItemsContainer.appendChild(div);
+    });
+  }
+</script>
+
+
+
+
+
+
+<!-- ===== START: Cart Drawer ===== -->
+<div id="cart-drawer" class="cart-drawer">
+  <div class="cart-content">
+    <button id="close-cart" class="close-cart">✕</button>
+    <h2>Your Cart</h2>
+    <div id="cart-items"></div>
+    <button id="clear-cart" class="cart-btn">🧹 Clear Cart</button>
+  </div>
+</div>
+<!-- ===== END: Cart Drawer ===== -->
+
+
+<!-- CART DRAWER (LA BELLA HAIR) -->
+<div class="cart-overlay" id="cartOverlay"></div>
+
+<div class="cart-drawer" id="cartDrawer">
+  <div class="cart-header">
+    <h2>Your Cart</h2>
+    <button class="close-cart" id="closeCart">&times;</button>
+  </div>
+
+  <div class="cart-items">
+    <div class="cart-item">
+      <img src="images/wig1.jpg" alt="Luxury Body Wave Wig">
+      <div>
+        <h3>Luxury Body Wave Wig</h3>
+        <p>$180</p>
+      </div>
+    </div>
+  </div>
+
+  <button class="cart-btn">Checkout</button>
+</div>
+
+
+<script>
+  const cartDrawer = document.getElementById("cartDrawer");
+  const cartOverlay = document.getElementById("cartOverlay");
+  const closeCart = document.getElementById("closeCart");
+  const cartBtn = document.querySelector(".cart-btn-header");
+
+  if (cartBtn && cartDrawer && cartOverlay && closeCart) {
+    cartBtn.addEventListener("click", () => {
+      cartDrawer.classList.add("active");
+      cartOverlay.classList.add("active");
+    });
+
+    closeCart.addEventListener("click", () => {
+      cartDrawer.classList.remove("active");
+      cartOverlay.classList.remove("active");
+    });
+
+    cartOverlay.addEventListener("click", () => {
+      cartDrawer.classList.remove("active");
+      cartOverlay.classList.remove("active");
+    });
+  }
+</script>
+
+
   </body>
