@@ -4736,55 +4736,7 @@ a::after {
 
 
 
-/* ===== CONTACT SECTION FONT FIX ===== */
-.contact-section {
-  color: #111; /* dark text for white background */
-  text-align: center;
-  padding: 60px 20px;
-}
 
-.contact-section h2 {
-  font-size: 2rem;
-  font-weight: 700; /* bold title */
-  color: #111; /* no gold */
-  margin-bottom: 20px;
-}
-
-.contact-info p {
-  font-size: 1.1rem; /* slightly larger for readability */
-  font-weight: 600; /* make it bold */
-  color: #222; /* strong dark tone */
-  line-height: 1.8; /* for good spacing */
-}
-
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  max-width: 500px;
-  padding: 12px;
-  margin: 10px auto;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-size: 1rem;
-  display: block;
-}
-
-.contact-form button {
-  background-color: #b8860b; /* dark golden button */
-  color: #fff;
-  border: none;
-  padding: 12px 30px;
-  font-size: 1rem;
-  font-weight: 600;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.contact-form button:hover {
-  background-color: #a0750a;
-  transform: translateY(-2px);
-}
 
 
 
@@ -4930,119 +4882,991 @@ a::after {
 
 
 
-/* ========== CART DRAWER FINAL FIXED VERSION ========== */
-.cart-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.4);
-  z-index: 9998;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s ease;
+/* ===== BEST SELLER SECTION ===== */
+.best-seller-section {
+  background-color: #fff;
+  color: #111;
+  padding: 80px 20px;
+  text-align: center;
 }
 
-.cart-overlay.active {
-  opacity: 1;
-  visibility: visible;
+.best-seller-section h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 50px;
+  color: #111;
 }
 
-.cart-drawer {
-  position: fixed;
-  top: 0;
-  right: -400px;
-  width: 350px;
-  height: 100vh;
-  background: #fff;
-  z-index: 9999;
-  box-shadow: -5px 0 20px rgba(0, 0, 0, 0.2);
-  transition: right 0.4s ease-in-out;
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  justify-items: center;
+}
+
+.product-card {
+  background-color: #f8f8f8;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   padding: 20px;
-  overflow-y: auto;
-  display: flex;
-  flex-direction: column;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  max-width: 300px;
 }
 
-.cart-drawer.active {
-  right: 0;
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
 }
 
-.cart-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.product-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
   margin-bottom: 15px;
 }
 
-.cart-header h2 {
-  font-size: 20px;
+.product-card h3 {
+  font-size: 1.1rem;
   font-weight: 600;
   color: #111;
+  margin-bottom: 6px;
+}
+
+.product-card .size {
+  font-size: 0.95rem;
+  color: #444;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.product-card .price {
+  font-size: 1rem;
+  color: #111;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.add-cart-btn {
+  background-color: #b8860b; /* dark golden */
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.add-cart-btn:hover {
+  background-color: #a0780a;
+  transform: scale(1.05);
+}
+
+/* Responsive: Center products on mobile */
+@media (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .product-card {
+    max-width: 90%;
+  }
+}
+
+
+
+/* ===== CONTACT SECTION (La Bella Hair) ===== */
+.contact-section {
+  background: #fff;
+  color: #111;
+  padding: 72px 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* container */
+.contact-wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  gap: 36px;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+
+/* LEFT: form block */
+.contact-left {
+  flex: 1 1 60%;
+  min-width: 300px;
+}
+
+/* Titles and lead */
+.contact-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.9rem;
+  font-weight: 700;
+  margin: 0 0 10px;
+  color: #111; /* no gold */
+  letter-spacing: 0.6px;
+}
+
+.contact-lead {
+  font-size: 1.05rem;
+  font-weight: 600; /* bold like hero text */
+  color: #333;
+  line-height: 1.8;
+  margin-bottom: 22px;
+  max-width: 100%;
+}
+
+/* Form */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 13px 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(0,0,0,0.14);
+  background: #fbfbfb;
+  font-size: 1rem;
+  font-weight: 600; /* bold input text */
+  color: #222;
+  outline: none;
+  transition: box-shadow 0.16s ease, border-color 0.16s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: rgba(178,140,24,0.85); /* subtle dark-gold focus */
+  box-shadow: 0 6px 20px rgba(178,140,24,0.06);
+}
+
+/* Send button (dark-gold) */
+.btn-send {
+  width: 220px;
+  max-width: 100%;
+  padding: 12px 18px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #fff;
+  background: linear-gradient(90deg,#b8860b,#8f6507);
+  box-shadow: 0 8px 22px rgba(184,134,11,0.18);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.btn-send:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(184,134,11,0.28);
+}
+
+/* RIGHT: contact details */
+.contact-right {
+  flex: 0 0 320px;
+  min-width: 240px;
+  background: #fff;
+  padding: 6px 0 0 0;
+}
+
+.contact-info-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #111;
+  margin: 0 0 14px;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact-detail {
+  font-size: 1.02rem;
+  font-weight: 700; /* bold */
+  color: #222;
+  line-height: 1.6;
+}
+
+/* social links (text for now) */
+.contact-social {
+  margin-top: 18px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.social-link {
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: transparent;
+  color: #222;
+  font-weight: 700;
+  border: 1px solid rgba(0,0,0,0.06);
+}
+
+/* Visually hidden label helper (for accessibility) */
+.visually-hidden {
+  position: absolute !important;
+  height: 1px; width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+}
+
+/* ===== RESPONSIVE: stack on mobile ===== */
+@media (max-width: 880px) {
+  .contact-wrap {
+    flex-direction: column;
+    gap: 22px;
+  }
+
+  .contact-left, .contact-right {
+    width: 100%;
+    flex: 1 1 100%;
+    min-width: 0;
+  }
+
+  .btn-send {
+    width: 100%;
+  }
+
+  .contact-right {
+    padding-top: 10px;
+  }
+
+  .contact-title {
+    text-align: left;
+  }
+}
+
+
+
+
+
+/* === CART DRAWER === */
+.cart-drawer {
+  position: fixed;
+  bottom: 0;
+  right: 20px;
+  width: 360px;
+  max-width: 95%;
+  background: #fff;
+  border-radius: 20px 20px 0 0;
+  box-shadow: 0 -5px 25px rgba(0, 0, 0, 0.15);
+  transform: translateY(110%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 9999;
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+}
+
+.cart-drawer.open {
+  transform: translateY(0);
+}
+
+.cart-header {
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 18px;
+  font-size: 1.1rem;
+  font-weight: 600;
 }
 
 .close-cart {
   background: none;
   border: none;
-  font-size: 26px;
-  color: #111;
+  font-size: 1.6rem;
+  color: #fff;
   cursor: pointer;
-  font-weight: bold;
 }
 
-.cart-items {
-  flex-grow: 1;
+.cart-body {
+  padding: 18px;
+  max-height: 250px;
   overflow-y: auto;
 }
 
-.cart-item {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  border-bottom: 1px solid #ddd;
-  padding: 10px 0;
-}
-
-.cart-item img {
-  width: 65px;
-  height: 65px;
-  border-radius: 8px;
-  object-fit: cover;
-}
-
-.cart-item h3 {
-  font-size: 15px;
-  color: #222;
+.cart-items {
+  list-style: none;
+  padding: 0;
   margin: 0;
 }
 
-.cart-item p {
-  font-size: 14px;
-  color: #555;
-  margin: 5px 0 0;
+.cart-items li {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  padding: 10px 0;
+  font-weight: 600;
+}
+
+.cart-total {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12px;
+  font-weight: 700;
+}
+
+.checkout-btn {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(90deg, #b8860b, #8f6507);
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.checkout-btn:hover {
+  background: linear-gradient(90deg, #8f6507, #b8860b);
+}
+
+/* === MOBILE === */
+@media (max-width: 768px) {
+  .cart-drawer {
+    right: 0;
+    left: 0;
+    width: 100%;
+    border-radius: 18px 18px 0 0;
+  }
+}
+
+
+/* === CART ICON STYLE === */
+.cart-icon {
+  font-size: 1.4rem;
+  color: #b8860b; /* gold tone */
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.2s ease;
+  margin-left: 10px;
+}
+
+/* Hover effect for a luxury shine */
+.cart-icon:hover {
+  color: #d4af37; /* brighter gold */
+  transform: scale(1.1);
+}
+
+
+
+
+/* === FORCE GOLDEN COLOR CART ICON === */
+.cart-icon {
+  font-size: 1.6rem !important;
+  color: #d4af37 !important; /* rich golden color */
+  background: none !important;
+  border: none !important;
+  cursor: pointer !important;
+  margin-left: 12px !important;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover glow for premium look */
+.cart-icon:hover {
+  color: #ffd700 !important; /* lighter gold */
+  text-shadow: 0 0 8px rgba(212, 175, 55, 0.6);
+  transform: scale(1.1);
+}
+
+
+
+/* === GOLDEN CART ICON FIX === */
+.cart-icon {
+  font-size: 1.6rem !important;
+  color: #d4af37 !important; /* rich golden color */
+  background: none !important;
+  border: none !important;
+  cursor: pointer !important;
+  margin-left: 12px !important;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover glow for a luxury feel */
+.cart-icon:hover {
+  color: #ffd700 !important; /* lighter golden glow */
+  text-shadow: 0 0 8px rgba(212, 175, 55, 0.6);
+  transform: scale(1.1);
+}
+
+
+
+/* === UNIVERSAL GOLDEN CART ICON OVERRIDE === */
+html body .cart-icon,
+html body #cartButton,
+html body button.cart-icon {
+  font-size: 1.6rem !important;
+  color: #d4af37 !important; /* rich gold */
+  background: none !important;
+  border: none !important;
+  cursor: pointer !important;
+  margin-left: 12px !important;
+  transition: color 0.3s ease, transform 0.2s ease;
+  vertical-align: middle !important;
+}
+
+/* Hover glow for a luxury golden feel */
+html body .cart-icon:hover,
+html body #cartButton:hover {
+  color: #ffd700 !important; /* lighter gold glow */
+  text-shadow: 0 0 8px rgba(212, 175, 55, 0.6);
+  transform: scale(1.1);
+}
+
+
+
+
+
+/* === LUXURY GOLDEN CART ICON WITH SHIMMER ANIMATION === */
+html body .cart-icon,
+html body #cartButton,
+html body button.cart-icon {
+  font-size: 1.6rem !important;
+  color: #d4af37 !important; /* base gold */
+  background: none !important;
+  border: none !important;
+  cursor: pointer !important;
+  margin-left: 12px !important;
+  transition: color 0.3s ease, transform 0.2s ease;
+  vertical-align: middle !important;
+  position: relative;
+}
+
+/* Hover glow for luxury effect */
+html body .cart-icon:hover,
+html body #cartButton:hover {
+  color: #ffd700 !important; /* brighter gold */
+  text-shadow: 0 0 8px rgba(255, 215, 0, 0.6);
+  transform: scale(1.1);
+}
+
+/* Subtle shimmer animation */
+@keyframes goldenShimmer {
+  0% { text-shadow: 0 0 5px rgba(255, 215, 0, 0.4); }
+  50% { text-shadow: 0 0 15px rgba(255, 215, 0, 0.8); }
+  100% { text-shadow: 0 0 5px rgba(255, 215, 0, 0.4); }
+}
+
+/* Apply shimmer every few seconds */
+html body .cart-icon,
+html body #cartButton {
+  animation: goldenShimmer 3s infinite ease-in-out;
+}
+
+
+
+
+/* === LUXURY GOLDEN CART ICON === */
+.gold-cart {
+  font-size: 1.7rem !important;
+  color: #d4af37 !important; /* elegant gold */
+  background: none !important;
+  border: none !important;
+  cursor: pointer !important;
+  transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  position: relative !important;
+  z-index: 1000 !important;
+}
+
+/* Hover shine */
+.gold-cart:hover {
+  color: #ffd700 !important;
+  text-shadow: 0 0 8px rgba(255, 215, 0, 0.8);
+  transform: scale(1.15);
+}
+
+/* Golden shimmer animation */
+@keyframes goldShimmer {
+  0% { text-shadow: 0 0 4px rgba(255, 215, 0, 0.3); }
+  50% { text-shadow: 0 0 12px rgba(255, 215, 0, 0.8); }
+  100% { text-shadow: 0 0 4px rgba(255, 215, 0, 0.3); }
+}
+
+/* Apply gentle shimmer continuously */
+.gold-cart {
+  animation: goldShimmer 2.5s infinite ease-in-out;
+}
+
+
+
+
+.gold-cart i {
+  font-size: 1.7rem;
+  color: #d4af37; /* rich gold */
+  transition: all 0.3s ease-in-out;
+}
+
+.gold-cart:hover i {
+  color: #ffd700; /* bright gold */
+  transform: scale(1.15);
+  text-shadow: 0 0 8px rgba(255, 215, 0, 0.8);
+}
+
+
+
+
+
+/* Clean golden cart icon */
+.gold-cart {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  outline: none;
+}
+
+.gold-cart i {
+  font-size: 1.8rem;
+  color: #d4af37; /* elegant gold */
+  transition: all 0.3s ease-in-out;
+}
+
+.gold-cart i:hover {
+  color: #ffd700; /* glowing bright gold */
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
+  transform: scale(1.1);
+}
+
+
+
+
+
+
+/* Best Seller Section */
+.best-seller {
+  padding: 60px 5%;
+  text-align: center;
+  background: #fff;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 30px;
+}
+
+.products-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.product {
+  background: #f7f7f7;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.product:hover {
+  transform: scale(1.05);
+}
+
+.product img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.product h3 {
+  margin: 10px 0;
+  font-size: 1.1rem;
+  color: #000;
+}
+
+.product p {
+  color: #444;
+  font-weight: 500;
+}
+
+.add-to-cart {
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.3s;
+}
+
+.add-to-cart:hover {
+  background: #444;
+}
+
+/* Cart Controls */
+.cart-controls {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.cart-icon {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: gold;
+  transition: transform 0.3s;
+}
+
+.cart-icon:hover {
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 5px gold);
 }
 
 .cart-btn {
-  background: #111;
-  color: #fff;
-  border: none;
-  padding: 12px;
-  font-size: 15px;
+  background: transparent;
+  color: gold;
+  border: 1px solid gold;
   border-radius: 8px;
+  padding: 8px 16px;
   cursor: pointer;
-  margin-top: 15px;
-  transition: background 0.3s ease;
+  font-weight: bold;
+  transition: all 0.3s;
 }
 
 .cart-btn:hover {
-  background: #333;
+  background: gold;
+  color: #000;
 }
 
+/* Cart Container */
+.cart-container {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 300px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+  z-index: 999;
+}
+
+.cart-container h3 {
+  color: #000;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.cart-container ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.checkout-btn {
+  width: 100%;
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: bold;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+.checkout-btn:hover {
+  background: #444;
+}
+
+/* Mobile View */
 @media (max-width: 768px) {
-  .cart-drawer {
+  .cart-container {
+    width: 90%;
+    right: 5%;
+  }
+}
+
+
+
+
+
+/* Checkout button (golden style and adjusted position) */
+#checkout-btn {
+  width: 100%;
+  background-color: #d4af37; /* golden */
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  padding: 12px;
+  border-radius: 8px;
+  margin-top: 10px;
+  margin-bottom: 50px; /* adds space from WhatsApp button */
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(212, 175, 55, 0.4);
+}
+
+#checkout-btn:hover {
+  background-color: #b9962f; /* slightly darker gold */
+  box-shadow: 0 6px 15px rgba(212, 175, 55, 0.6);
+  transform: translateY(-2px);
+}
+
+
+
+
+
+.cart-container {
+  bottom: 80px; /* previously 20px */
+}
+
+
+
+/* CONTACT SECTION */
+.contact-section {
+  background-color: #fff;
+  color: #222;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.contact-section h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #000; /* No gold */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.contact-section p {
+  color: #555;
+  font-size: 1rem;
+  margin-bottom: 30px;
+}
+
+.contact-section .container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.contact-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* CONTACT FORM */
+.contact-form {
+  flex: 1 1 45%;
+  text-align: left;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  outline: none;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background-color: #f9f9f9;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #c7a239;
+  background-color: #fff;
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* GOLD BUTTON */
+.send-message-btn {
+  background-color: #c7a239;
+  color: #fff;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(199, 162, 57, 0.4);
+}
+
+.send-message-btn:hover {
+  background-color: #b49130;
+  box-shadow: 0 0 15px rgba(199, 162, 57, 0.6);
+}
+
+/* CONTACT INFO */
+.contact-info {
+  flex: 1 1 45%;
+  text-align: left;
+}
+
+.contact-info h3 {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  color: #000;
+}
+
+.contact-info p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.contact-info i {
+  color: #c7a239;
+  margin-right: 8px;
+}
+
+/* MAP */
+.map-container {
+  margin-top: 20px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 220px;
+  border: none;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .contact-content {
+    flex-direction: column;
+  }
+
+  .contact-form,
+  .contact-info {
+    flex: 1 1 100%;
+  }
+
+  .contact-section {
+    padding: 40px 15px;
+  }
+}
+
+
+
+
+
+/* CONTACT SECTION */
+.contact-section {
+  background-color: #fff; /* White background */
+  color: #222;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.contact-section h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #000; /* No gold here */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.contact-section p {
+  color: #555;
+  font-size: 1rem;
+  margin-bottom: 30px;
+}
+
+.contact-section .container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  outline: none;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background-color: #f9f9f9;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #c7a239; /* subtle gold border on focus */
+  background-color: #fff;
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* GOLDEN BUTTON */
+.send-message-btn {
+  background-color: #c7a239;
+  color: #fff;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(199, 162, 57, 0.4);
+}
+
+.send-message-btn:hover {
+  background-color: #b49130;
+  box-shadow: 0 0 15px rgba(199, 162, 57, 0.6);
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .contact-section {
+    padding: 40px 15px;
+  }
+  .send-message-btn {
     width: 100%;
-    right: -100%;
   }
 }
 

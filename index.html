@@ -14,6 +14,8 @@
     <!-- Main CSS (use only one) -->
     <link rel="stylesheet" href="assets/css/style.css">
 
+   
+
   </head>
 </script>
   <body>
@@ -37,12 +39,15 @@
     </nav>
 
     <!-- Cart (Right) -->
-    <button id="cart-btn" class="cart-btn">🛒 Cart (<span id="cart-count">0</span>)</button>
+    <!-- Include Font Awesome CDN in <head> if not already added -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
+<!-- Golden Cart Button -->
+<button id="cartButton" class="cart-icon gold-cart">
+  <i class="fas fa-shopping-cart"></i>
+</button>
 
-   <button id="clear-cart" class="cart-btn">🧹 Clear Cart</button>
-
-   
+<button id="clear-cart" class="cart-btn">🧹 Clear Cart</button>
 
     <!-- Mobile Menu Button -->
     <button id="menu-toggle" class="menu-toggle" aria-label="Toggle menu">☰</button>
@@ -76,96 +81,147 @@
 <!-- ===== HERO SECTION END ===== -->
 
 
-
-<!-- ===== START: OUR BEST SELLER ===== -->
-<section class="best-seller">
-  <h2>OUR BEST SELLER</h2>
-  <div class="product-grid">
-
-    <div class="product">
-      <img src="assets/images/products/wig1.PNG" alt="Luxury Body Wave Wig">
+<section id="best-seller" class="best-seller">
+  <h2 class="section-title">OUR BEST SELLERS</h2>
+  <div class="products-container">
+    <div class="product" data-name="Luxury Body Wave Wig" data-price="130" data-size="13x4">
+      <img src="assets/images/product1.jpg" alt="Luxury Body Wave Wig">
       <h3>Luxury Body Wave Wig</h3>
-      <p>Size: 22 inches</p>
-      <p class="product-price">$180</p>
-      <button class="add-to-cart">🛒 Add to Cart</button>
+      <p>Size: 13x4 | Price: $130</p>
+      <button class="add-to-cart">Add to Cart</button>
     </div>
 
-    <div class="product">
-      <img src="assets/images/products/wig2.PNG" alt="Bone Straight Hair Wig">
-      <h3>Bone Straight Hair Wig</h3>
-      <p>Size: 24 inches</p>
-      <p class="product-price">$180</p>
-      <button class="add-to-cart">🛒 Add to Cart</button>
+    <div class="product" data-name="Loose Wave Wig" data-price="140" data-size="13x6">
+      <img src="assets/images/product2.jpg" alt="Loose Wave Wig">
+      <h3>Loose Wave Wig</h3>
+      <p>Size: 13x6 | Price: $140</p>
+      <button class="add-to-cart">Add to Cart</button>
     </div>
 
-    <div class="product">
-      <img src="assets/images/products/wig3.PNG" alt="Deep Curly Wig">
-      <h3>Deep Curly Wig</h3>
-      <p>Size: 20 inches</p>
-      <p class="product-price">$180</p>
-      <button class="add-to-cart">🛒 Add to Cart</button>
-    </div>
-
-    <div class="product">
-      <img src="assets/images/products/wig4.jpg" alt="Pixie Cut Wig">
+    <div class="product" data-name="Pixie Cut Wig" data-price="90" data-size="5x5">
+      <img src="assets/images/product3.jpg" alt="Pixie Cut Wig">
       <h3>Pixie Cut Wig</h3>
-      <p>Size: 12 inches</p>
-      <p class="product-price">$180</p>
-      <button class="add-to-cart">🛒 Add to Cart</button>
+      <p>Size: 5x5 | Price: $90</p>
+      <button class="add-to-cart">Add to Cart</button>
     </div>
 
-    <div class="product">
-      <img src="assets/images/products/wig5.PNG" alt="Blonde Highlight Wig">
-      <h3>Blonde Highlight Wig</h3>
-      <p>Size: 18 inches</p>
-      <p class="product-price">$180</p>
-      <button class="add-to-cart">🛒 Add to Cart</button>
+    <div class="product" data-name="Natural Wave Wig" data-price="115" data-size="13x4">
+      <img src="assets/images/product4.jpg" alt="Natural Wave Wig">
+      <h3>Natural Wave Wig</h3>
+      <p>Size: 13x4 | Price: $115</p>
+      <button class="add-to-cart">Add to Cart</button>
     </div>
 
-    <div class="product">
-      <img src="assets/images/products/wig6.jpg" alt="Frontal Wig">
-      <h3>13x4 Frontal Wig</h3>
-      <p>Size: 22 inches</p>
-      <p class="product-price">$180</p>
-      <button class="add-to-cart">🛒 Add to Cart</button>
+    <div class="product" data-name="Deep Wave Wig" data-price="125" data-size="5x5">
+      <img src="assets/images/product5.jpg" alt="Deep Wave Wig">
+      <h3>Deep Wave Wig</h3>
+      <p>Size: 5x5 | Price: $125</p>
+      <button class="add-to-cart">Add to Cart</button>
     </div>
 
-    <div class="product">
-      <img src="assets/images/products/wig7.jpg" alt="Curly Wave Wig">
-      <h3>Curly Wave Wig</h3>
-      <p>Size: 20 inches</p>
-      <p class="product-price">$180</p>
-      <button class="add-to-cart">🛒 Add to Cart</button>
+    <div class="product" data-name="Frontal Straight Wig" data-price="145" data-size="13x6">
+      <img src="assets/images/product6.jpg" alt="Frontal Straight Wig">
+      <h3>Frontal Straight Wig</h3>
+      <p>Size: 13x6 | Price: $145</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div> 
+      <div class="product" data-name="Luxury Body Wave Wig" data-price="130" data-size="13x4">
+      <img src="assets/images/product1.jpg" alt="Luxury Body Wave Wig">
+      <h3>Luxury Body Wave Wig</h3>
+      <p>Size: 13x4 | Price: $130</p>
+      <button class="add-to-cart">Add to Cart</button>
     </div>
 
-    <div class="product">
-      <img src="assets/images/products/wig8.jpg" alt="Straight Lace Wig">
-      <h3>Straight Lace Wig</h3>
-      <p>Size: 26 inches</p>
-      <p class="product-price">$180</p>
-      <button class="add-to-cart">🛒 Add to Cart</button>
+    <div class="product" data-name="Loose Wave Wig" data-price="140" data-size="13x6">
+      <img src="assets/images/product2.jpg" alt="Loose Wave Wig">
+      <h3>Loose Wave Wig</h3>
+      <p>Size: 13x6 | Price: $140</p>
+      <button class="add-to-cart">Add to Cart</button>
     </div>
 
-    <div class="product">
-      <img src="assets/images/products/wig11.jpg" alt="Luxury Full Wig">
-      <h3>Luxury Full Wig</h3>
-      <p>Size: 24 inches</p>
-      <p class="product-price">$180</p>
-      <button class="add-to-cart">🛒 Add to Cart</button>
+    <div class="product" data-name="Pixie Cut Wig" data-price="90" data-size="5x5">
+      <img src="assets/images/product3.jpg" alt="Pixie Cut Wig">
+      <h3>Pixie Cut Wig</h3>
+      <p>Size: 5x5 | Price: $90</p>
+      <button class="add-to-cart">Add to Cart</button>
     </div>
 
-    <div class="product-card">
-  <img src="assets/images/products/wig10.jpg" alt="Luxury Body Wave Wig" class="product-image" />
-  <h3 class="product-name">Luxury Body Wave Wig</h3>
-  <p class="product-size">Size: 24 inches</p>
-  <p class="product-price">$180</p>
-  <button class="add-to-cart">🛒 Add to Cart</button>
+    <div class="product" data-name="Natural Wave Wig" data-price="115" data-size="13x4">
+      <img src="assets/images/product4.jpg" alt="Natural Wave Wig">
+      <h3>Natural Wave Wig</h3>
+      <p>Size: 13x4 | Price: $115</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+
+    <div class="product" data-name="Deep Wave Wig" data-price="125" data-size="5x5">
+      <img src="assets/images/product5.jpg" alt="Deep Wave Wig">
+      <h3>Deep Wave Wig</h3>
+      <p>Size: 5x5 | Price: $125</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+
+    <div class="product" data-name="Frontal Straight Wig" data-price="145" data-size="13x6">
+      <img src="assets/images/product6.jpg" alt="Frontal Straight Wig">
+      <h3>Frontal Straight Wig</h3>
+      <p>Size: 13x6 | Price: $145</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+
+    <div class="product" data-name="Luxury Body Wave Wig" data-price="130" data-size="13x4">
+      <img src="assets/images/product1.jpg" alt="Luxury Body Wave Wig">
+      <h3>Luxury Body Wave Wig</h3>
+      <p>Size: 13x4 | Price: $130</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+
+    <div class="product" data-name="Loose Wave Wig" data-price="140" data-size="13x6">
+      <img src="assets/images/product2.jpg" alt="Loose Wave Wig">
+      <h3>Loose Wave Wig</h3>
+      <p>Size: 13x6 | Price: $140</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+
+    <div class="product" data-name="Pixie Cut Wig" data-price="90" data-size="5x5">
+      <img src="assets/images/product3.jpg" alt="Pixie Cut Wig">
+      <h3>Pixie Cut Wig</h3>
+      <p>Size: 5x5 | Price: $90</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+
+    <div class="product" data-name="Natural Wave Wig" data-price="115" data-size="13x4">
+      <img src="assets/images/product4.jpg" alt="Natural Wave Wig">
+      <h3>Natural Wave Wig</h3>
+      <p>Size: 13x4 | Price: $115</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+
+    <div class="product" data-name="Natural Wave Wig" data-price="115" data-size="13x4">
+      <img src="assets/images/product4.jpg" alt="Natural Wave Wig">
+      <h3>Natural Wave Wig</h3>
+      <p>Size: 13x4 | Price: $115</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+
+    <div class="product" data-name="Deep Wave Wig" data-price="125" data-size="5x5">
+      <img src="assets/images/product5.jpg" alt="Deep Wave Wig">
+      <h3>Deep Wave Wig</h3>
+      <p>Size: 5x5 | Price: $125</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+  </div>
+</section>
+
+
+<!-- Cart Drawer -->
+<div id="cart-container" class="cart-container">
+  <h3>Your Cart</h3>
+  <ul id="cart-items"></ul>
+  <button id="checkout-btn" class="checkout-btn">Proceed to Checkout</button>
 </div>
 
 
-  </div>
-</section>
-<!-- ===== END: OUR BEST SELLER ===== -->
+
+
 
 
 <section class="about-section">
@@ -189,38 +245,71 @@
 </section>
 
 
+
+<!-- CONTACT SECTION -->
 <section id="contact" class="contact-section">
-  <div class="contact-container">
-    <div class="contact-header">
-      <h2>Get in Touch</h2>
-      <p>We’d love to hear from you — whether you have a question, feedback, or just want to say hello.</p>
-    </div>
+  <div class="container">
+    <h2>Contact Us</h2>
+    <p>We’d love to hear from you! Fill out the form below or reach us directly.</p>
 
     <div class="contact-content">
-      <div class="contact-form">
-        <form>
-          <input type="text" placeholder="Your Name" required>
-          <input type="email" placeholder="Your Email" required>
-          <textarea rows="5" placeholder="Your Message" required></textarea>
-          <button type="submit">Send Message</button>
-        </form>
-      </div>
+      <!-- Contact Form -->
+      <form id="contact-form" class="contact-form">
+        <div class="form-group">
+          <input type="text" id="name" name="name" placeholder="Your Name" required>
+        </div>
+        <div class="form-group">
+          <input type="email" id="email" name="email" placeholder="Your Email" required>
+        </div>
+        <div class="form-group">
+          <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+        </div>
+        <button type="submit" class="send-message-btn">Send Message</button>
+      </form>
 
-      <!-- Contact Details -->
-      <div class="text-center md:text-left space-y-6">
-        <p class="text-lg md:text-xl font-semibold leading-relaxed">
-          La Bella Hair is always available to respond to your inquiries and provide the best assistance possible. 
-          Your satisfaction is our priority.
-        </p>
-        <div class="font-semibold space-y-2">
-          <p>📍 Dubai, United Arab Emirates</p>
-          <p>📞 +971 55 733 8670</p>
-          <p>✉️ contact@labellahair.com</p>
+      <!-- Contact Info -->
+      <div class="contact-info">
+        <h2>Get in Touch</h2>
+        <p><i class="fas fa-map-marker-alt"></i> Lagos, Nigeria</p>
+        <p><i class="fas fa-phone-alt"></i> +971 55 733 8670</p>
+        <p><i class="fas fa-envelope"></i> info@biohair.com</p>
+
+        <!-- Google Map -->
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps?q=Lagos,+Nigeria&output=embed"
+            allowfullscreen=""
+            loading="lazy">
+          </iframe>
         </div>
       </div>
     </div>
   </div>
 </section>
+
+
+
+<!-- 🛒 Simple Cart Drawer -->
+<div id="cartDrawer" class="cart-drawer">
+  <div class="cart-header">
+    <h3>Your Basket</h3>
+    <button class="close-cart">&times;</button>
+  </div>
+
+  <div class="cart-body">
+    <ul id="cartItems" class="cart-items">
+      <!-- Example item (auto added dynamically) -->
+      <!-- <li><span>Luxury Body Wave Wig</span><span>$250</span></li> -->
+    </ul>
+    <div class="cart-total">
+      <strong>Total:</strong> <span id="cartTotal">$0.00</span>
+    </div>
+  </div>
+
+  <div class="cart-footer">
+    <button class="checkout-btn">Checkout</button>
+  </div>
+</div>
 
 
 
@@ -294,33 +383,6 @@
 </script>
 
 
-<script>
-  // Load saved cart count from localStorage or start from 0
-  let cartCount = localStorage.getItem('cartCount') ? parseInt(localStorage.getItem('cartCount')) : 0;
-  const cartCountElement = document.getElementById('cart-count');
-  const addToCartButtons = document.querySelectorAll('.add-to-cart');
-
-  // Display saved count on page load
-  cartCountElement.textContent = cartCount;
-
-  // Function to update cart
-  function updateCart() {
-    cartCount++;
-    cartCountElement.textContent = cartCount;
-    localStorage.setItem('cartCount', cartCount); // save count persistently
-  }
-
-  // Add click events to all buttons
-  addToCartButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      updateCart();
-      button.textContent = "✅ Added!";
-      setTimeout(() => {
-        button.textContent = "🛒 Add to Cart";
-      }, 1200);
-    });
-  });
-</script>
 
 <script>
   const clearCartButton = document.getElementById('clear-cart');
@@ -441,66 +503,162 @@
 
 
 
-
-
-<!-- ===== START: Cart Drawer ===== -->
-<div id="cart-drawer" class="cart-drawer">
-  <div class="cart-content">
-    <button id="close-cart" class="close-cart">✕</button>
-    <h2>Your Cart</h2>
-    <div id="cart-items"></div>
-    <button id="clear-cart" class="cart-btn">🧹 Clear Cart</button>
-  </div>
-</div>
-<!-- ===== END: Cart Drawer ===== -->
-
-
-<!-- CART DRAWER (LA BELLA HAIR) -->
-<div class="cart-overlay" id="cartOverlay"></div>
-
-<div class="cart-drawer" id="cartDrawer">
+<!-- 🛒 Simple Responsive Cart Drawer -->
+<div id="cartDrawer" class="cart-drawer">
   <div class="cart-header">
-    <h2>Your Cart</h2>
-    <button class="close-cart" id="closeCart">&times;</button>
+    <h3>Your Basket</h3>
+    <button id="closeCart" class="close-cart">&times;</button>
   </div>
 
-  <div class="cart-items">
-    <div class="cart-item">
-      <img src="images/wig1.jpg" alt="Luxury Body Wave Wig">
-      <div>
-        <h3>Luxury Body Wave Wig</h3>
-        <p>$180</p>
-      </div>
+  <div class="cart-body">
+    <ul id="cartItems" class="cart-items"></ul>
+    <div class="cart-total">
+      <strong>Total:</strong> <span id="cartTotal">$0.00</span>
     </div>
   </div>
 
-  <button class="cart-btn">Checkout</button>
+  <div class="cart-footer">
+    <button class="checkout-btn">Checkout</button>
+  </div>
 </div>
 
 
+
 <script>
-  const cartDrawer = document.getElementById("cartDrawer");
-  const cartOverlay = document.getElementById("cartOverlay");
-  const closeCart = document.getElementById("closeCart");
-  const cartBtn = document.querySelector(".cart-btn-header");
+const cartButton = document.getElementById('cartButton');
+const cartDrawer = document.getElementById('cartDrawer');
+const closeCart = document.getElementById('closeCart');
+const cartItems = document.getElementById('cartItems');
+const cartTotal = document.getElementById('cartTotal');
 
-  if (cartBtn && cartDrawer && cartOverlay && closeCart) {
-    cartBtn.addEventListener("click", () => {
-      cartDrawer.classList.add("active");
-      cartOverlay.classList.add("active");
-    });
+let total = 0;
 
-    closeCart.addEventListener("click", () => {
-      cartDrawer.classList.remove("active");
-      cartOverlay.classList.remove("active");
-    });
+// Open / close the cart drawer
+cartButton.addEventListener('click', () => {
+  cartDrawer.classList.toggle('open');
+});
 
-    cartOverlay.addEventListener("click", () => {
-      cartDrawer.classList.remove("active");
-      cartOverlay.classList.remove("active");
-    });
-  }
+closeCart.addEventListener('click', () => {
+  cartDrawer.classList.remove('open');
+});
+
+// Function to add an item
+function addToCart(name, price) {
+  const li = document.createElement('li');
+  li.innerHTML = `<span>${name}</span><span>$${price.toFixed(2)}</span>`;
+  cartItems.appendChild(li);
+
+  total += price;
+  cartTotal.textContent = `$${total.toFixed(2)}`;
+}
 </script>
 
 
-  </body>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const addToCartButtons = document.querySelectorAll(".add-to-cart");
+  const cartContainer = document.getElementById("cart-container");
+  const cartItemsList = document.getElementById("cart-items");
+  const cartButton = document.getElementById("cartButton");
+  const clearCartButton = document.getElementById("clear-cart");
+  const checkoutButton = document.getElementById("checkout-btn");
+
+  let cart = [];
+
+  // Function to update cart display
+  function updateCartDisplay() {
+    cartItemsList.innerHTML = "";
+
+    if (cart.length === 0) {
+      cartItemsList.innerHTML = "<li>Your cart is empty</li>";
+      return;
+    }
+
+    cart.forEach((item, index) => {
+      const li = document.createElement("li");
+      li.style.marginBottom = "10px";
+      li.innerHTML = `
+        <strong>${item.name}</strong><br>
+        Size: ${item.size} | Price: $${item.price}
+        <button class="remove-item" data-index="${index}" 
+          style="background: transparent; color: red; border: none; cursor: pointer;">✖</button>
+      `;
+      cartItemsList.appendChild(li);
+    });
+  }
+
+  // Add to Cart
+  addToCartButtons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const product = btn.closest(".product");
+      const name = product.dataset.name;
+      const price = parseFloat(product.dataset.price);
+      const size = product.dataset.size;
+
+      cart.push({ name, price, size });
+      updateCartDisplay();
+
+      btn.textContent = "Added!";
+      btn.style.background = "#444";
+      btn.disabled = true;
+
+      setTimeout(() => {
+        btn.textContent = "Add to Cart";
+        btn.style.background = "#000";
+        btn.disabled = false;
+      }, 1000);
+    });
+  });
+
+  // Toggle cart visibility
+  cartButton.addEventListener("click", () => {
+    cartContainer.classList.toggle("visible");
+  });
+
+  // Clear Cart
+  clearCartButton.addEventListener("click", () => {
+    cart = [];
+    updateCartDisplay();
+  });
+
+  // Remove single item
+  cartItemsList.addEventListener("click", (e) => {
+    if (e.target.classList.contains("remove-item")) {
+      const index = e.target.dataset.index;
+      cart.splice(index, 1);
+      updateCartDisplay();
+    }
+  });
+
+  // Checkout
+  checkoutButton.addEventListener("click", () => {
+    if (cart.length === 0) {
+      alert("Your cart is empty!");
+      return;
+    }
+
+    let total = cart.reduce((sum, item) => sum + item.price, 0);
+    alert(`Thank you for shopping with LA BELLA HAIR! 💕\nYour total is $${total}.`);
+    cart = [];
+    updateCartDisplay();
+  });
+
+  updateCartDisplay();
+});
+
+
+
+
+cartButton.addEventListener("click", () => {
+  cartContainer.classList.toggle("hidden");
+});
+
+</script>
+
+
+
+
+
+</body>
